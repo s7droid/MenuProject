@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativelayoutSignUpActivityContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" >
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv1"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/menu_main_divider_color" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuEditText
+                    android:id="@+id/edittextSignUpActivityNameOnCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sign_in_edittext_shape"
+                    android:hint="@string/sign_in_first_name_hint_text"
+                    android:inputType="text"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/menu_main_gray"
+                    android:textColorHint="@color/menu_main_gray_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/menu_main_divider_color" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuEditText
+                    android:id="@+id/edittextSignUpActivityEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sign_in_edittext_shape"
+                    android:hint="@string/sign_in_username_hint_text"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/menu_main_gray"
+                    android:textColorHint="@color/menu_main_gray_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/menu_main_divider_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.usemenu.MenuAndroidApplication.views.MenuEditText
+                        android:id="@+id/edittextSignUpActivityPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/buttonSignUpActivityHide"
+                        android:layout_weight="1"
+                        android:background="@drawable/sign_in_edittext_shape"
+                        android:hint="@string/sign_in_password_hint_text"
+                        android:inputType="textPassword"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/menu_main_gray"
+                        android:textColorHint="@color/menu_main_gray_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                        android:id="@+id/buttonSignUpActivityHide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="center|right"
+                        android:text="@string/sign_up_show_button"
+                        android:textColor="@color/menu_main_gray_light"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/menu_main_divider_color" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuEditText
+                    android:id="@+id/edittextSignUpActivityRepeatPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sign_in_edittext_shape"
+                    android:hint="@string/sign_up_repeat_password_hint_text"
+                    android:inputType="textPassword"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/menu_main_gray"
+                    android:textColorHint="@color/menu_main_gray_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/menu_main_divider_color" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:id="@+id/textviewSignUpScanTermsOfUse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="7dp"
+                    android:textColor="@color/menu_main_gray"
+                    android:textSize="12sp" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuButton
+                    android:id="@+id/buttonSignUpScanCreditCard"
+                    style="@style/Menu_Button_Rounded_Orange_With_Selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/sign_up_scan_credit_card_hint_text"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/menu_main_divider_color" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuEditText
+                    android:id="@+id/edittextSignUpActivityCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sign_in_edittext_shape"
+                    android:hint="@string/sign_up_credit_card_number_hint_text"
+                    android:inputType="number"
+                    android:maxLength="19"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/menu_main_gray_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/menu_main_divider_color" />
+
+                <!-- <com.s7design.menu.views.MenuEditText -->
+                <!-- android:id="@+id/edittextSignUpActivityNameOnCard" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:background="@drawable/sign_in_edittext_shape" -->
+                <!-- android:hint="@string/sign_up_name_on_card_hint_text" -->
+                <!-- android:inputType="textPersonName" -->
+                <!-- android:paddingBottom="10dp" -->
+                <!-- android:paddingTop="10dp" -->
+                <!-- android:singleLine="true" -->
+                <!-- android:textColor="@color/menu_main_gray" /> -->
+
+
+                <!-- <View -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="1dp" -->
+                <!-- android:alpha="0.5" -->
+                <!-- android:background="@color/menu_main_gray" /> -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.usemenu.MenuAndroidApplication.views.MenuEditText
+                        android:id="@+id/edittextSignUpActivityMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/edittextSignUpActivityCCV"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/edittextSignUpActivityCCV"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="MM"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:textColor="@color/menu_main_gray_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.usemenu.MenuAndroidApplication.views.MenuEditText
+                        android:id="@+id/edittextSignUpActivityYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/edittextSignUpActivityCCV"
+                        android:layout_alignTop="@+id/edittextSignUpActivityCCV"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/edittextSignUpActivityMonth"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/sign_up_calendar"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="YY"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:textColor="@color/menu_main_gray_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/edittextSignUpActivityMonth"
+                        android:layout_alignRight="@+id/edittextSignUpActivityMonth"
+                        android:layout_below="@+id/edittextSignUpActivityMonth"
+                        android:background="@color/menu_main_divider_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/edittextSignUpActivityYear"
+                        android:layout_alignRight="@+id/edittextSignUpActivityYear"
+                        android:layout_below="@+id/edittextSignUpActivityYear"
+                        android:background="@color/menu_main_divider_color" />
+
+                    <com.usemenu.MenuAndroidApplication.views.MenuEditText
+                        android:id="@+id/edittextSignUpActivityCCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/sign_in_edittext_shape"
+                        android:gravity="right"
+                        android:hint="@string/sign_up_cvv_hint_text"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/menu_main_gray_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/edittextSignUpActivityCCV"
+                        android:layout_alignRight="@+id/edittextSignUpActivityCCV"
+                        android:layout_below="@+id/edittextSignUpActivityCCV"
+                        android:background="@color/menu_main_divider_color" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.usemenu.MenuAndroidApplication.views.MenuButton
+        android:id="@+id/buttonSignUpActivitySignUp"
+        style="@style/Menu_Button_Orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/sign_up_button_text"
+        android:textStyle="bold" />
+
+</RelativeLayout><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/layout/activity_sign_up.xml -->

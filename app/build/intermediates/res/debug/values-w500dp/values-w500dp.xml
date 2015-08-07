@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values-w500dp/values-w500dp.xml -->
+    <eat-comment/>
+    <dimen name="bt_full_width">@dimen/bt_landscape_max_width</dimen>
+</resources>

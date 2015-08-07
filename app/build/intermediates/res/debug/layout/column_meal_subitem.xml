@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/linearlayoutSubMealImageContainer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" >
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/imageviewSubMealImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:id="@+id/imageViewOrangeBorder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/image_meals_list_shape_selected"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imageviewSubMealImage"
+            android:layout_alignTop="@+id/imageviewSubMealImage"
+            android:layout_margin="15dp"
+            android:layout_toRightOf="@+id/imageviewSubMealImage"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textviewSubMealTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="Garlic Soup"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:id="@+id/textviewSubMealBigPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/menu_main_gray_light"
+                    android:textSize="15sp" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:id="@+id/textViewDash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / "
+                    android:textColor="@color/menu_main_gray_light"
+                    android:textSize="15sp" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:id="@+id/textviewSubMealSmallPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/menu_main_gray_light"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/textviewSubMealPrice"
+                android:layout_weight="1" >
+
+                <com.usemenu.MenuAndroidApplication.views.MenuButton
+                    android:id="@+id/buttonSubMealOrderLarge"
+                    style="@style/Menu_Button_Rounded_Orange_With_Selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="10dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/category_meals_add_large"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuButton
+                    android:id="@+id/buttonSubMealOrderSmall"
+                    style="@style/Menu_Button_Rounded_Gray_With_Selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/category_meals_add_small"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imageviewSubMealImage"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/menu_main_divider_color" />
+
+</LinearLayout><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/layout/column_meal_subitem.xml -->

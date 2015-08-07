@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp" >
+
+    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+        android:id="@+id/textviewTokenizationActivityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.40"
+        android:text="@string/tokenization_explanation_title"
+        android:textColor="@color/menu_main_orange"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+        android:id="@+id/textviewTokenizationActivitySubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingMultiplier="1.40"
+        android:text="@string/tokenization_explanation_subtitle"
+        android:textColor="@color/menu_main_orange"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/tokenization_explain_step_one_icon" />
+
+            <View
+                android:id="@+id/sep1"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:background="@color/menu_main_divider_color" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textviewTokenizationActivityFirstStep"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/sep1"
+                android:gravity="left|top"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="1.40"
+                android:paddingTop="0dp"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:src="@drawable/tokenization_explain_down_arrow_icon" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:lineSpacingExtra="10dp"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="top"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/tokenization_explain_step_2" />
+
+            <View
+                android:id="@+id/sep2"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:background="@color/menu_main_divider_color" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textviewTokenizationActivitySecondStep"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/sep2"
+                android:gravity="left|top"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="1.40"
+                android:paddingTop="0dp"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:src="@drawable/tokenization_explain_down_arrow_icon" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:lineSpacingExtra="10dp"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/tokenization_explain_step_3" />
+
+            <View
+                android:id="@+id/sep3"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:background="@color/menu_main_divider_color" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textviewTokenizationActivityThirdStep"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/sep3"
+                android:gravity="left|top"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="1.40"
+                android:paddingTop="0dp"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/layout/activity_tokenization_explain.xml -->

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" 
+    android:id="@+id/relativelayoutSignInActivityContainer">
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo_menu_small" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv1"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.5"
+            android:background="@color/menu_main_gray" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuEditText
+            android:id="@+id/edittextSignInActivityUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sign_in_edittext_shape"
+            android:drawableLeft="@drawable/sign_in_user_icon"
+            android:drawablePadding="10dp"
+            android:hint="@string/sign_in_username_hint_text"
+            android:inputType="textNoSuggestions|textEmailAddress"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/menu_main_divider_color" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuEditText
+            android:id="@+id/edittextSignInActivityPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sign_in_edittext_shape"
+            android:drawableLeft="@drawable/sign_in_lock_icon"
+            android:drawablePadding="10dp"
+            android:hint="@string/sign_in_password_hint_text"
+            android:inputType="textPassword"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.5"
+            android:background="@color/menu_main_gray" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textviewSignInActivitySignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:gravity="left|bottom"
+            android:text="@string/sign_in_sign_up_text"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:alpha="0.5"
+            android:background="@color/menu_main_gray" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textviewSignInActivityForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="left|bottom"
+            android:text="@string/sign_in_forgot_password_text"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <com.usemenu.MenuAndroidApplication.views.MenuButton
+        android:id="@+id/buttonSignInActivitySignin"
+        style="@style/Menu_Button_Orange"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/sign_in_button_text"
+        android:textStyle="bold" />
+
+</RelativeLayout>

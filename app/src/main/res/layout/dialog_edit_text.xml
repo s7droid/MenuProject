@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_square_orange_white_fill"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+        android:id="@+id/textViewTitleAlertEditTextDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/menu_main_gray"
+        android:textSize="20sp" />
+
+    <com.usemenu.MenuAndroidApplication.views.MenuEditText
+        android:id="@+id/editetextBodyAlertEditTextDialog"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sign_in_edittext_shape"
+        android:gravity="left"
+        android:maxLength="10"
+        android:textColor="@color/menu_main_gray"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.usemenu.MenuAndroidApplication.views.MenuButton
+            android:id="@+id/buttonEditTextDialogOk"
+           style="@style/Menu_Button_Rounded_Orange_With_Selector"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:includeFontPadding="false"
+            android:background="@drawable/rounded_orange_button_selector"
+            android:gravity="center"
+            android:text="@string/dialog_add_comment"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textStyle="bold" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textviewCharactersLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/menu_main_gray_light"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

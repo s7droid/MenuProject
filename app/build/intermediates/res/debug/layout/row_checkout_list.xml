@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="7dp"
+    android:paddingTop="7dp" >
+
+    <LinearLayout
+        android:id="@+id/layoutName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical" >
+
+        <com.usemenu.MenuAndroidApplication.views.CircleButtonView
+            android:id="@+id/circleButtonViewQty"
+            android:layout_width="25dp"
+            android:layout_height="25dp" >
+        </com.usemenu.MenuAndroidApplication.views.CircleButtonView>
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textViewName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textViewIsSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/misc_is_small"
+            android:textColor="@color/menu_main_gray_light"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMinusPlus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <com.usemenu.MenuAndroidApplication.views.CircleButtonView
+            android:id="@+id/circleButtonViewMinus"
+            android:layout_width="25dp"
+            android:layout_height="25dp" >
+        </com.usemenu.MenuAndroidApplication.views.CircleButtonView>
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textViewQty"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.usemenu.MenuAndroidApplication.views.CircleButtonView
+            android:id="@+id/circleButtonViewPlus"
+            android:layout_width="25dp"
+            android:layout_height="25dp" >
+        </com.usemenu.MenuAndroidApplication.views.CircleButtonView>
+
+        <com.usemenu.MenuAndroidApplication.views.MenuButton
+            android:id="@+id/buttonDone"
+            style="@style/Menu_Button_Rounded_Orange_With_Selector"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/checkout_done"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/menu_main_gray"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <com.usemenu.MenuAndroidApplication.views.CircleButtonView
+        android:id="@+id/circleButtonViewDel"
+        android:layout_width="25dp"
+        android:layout_height="25dp" >
+    </com.usemenu.MenuAndroidApplication.views.CircleButtonView>
+
+</LinearLayout><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/layout/row_checkout_list.xml -->

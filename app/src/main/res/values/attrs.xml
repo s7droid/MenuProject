@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="text_font">
+        <attr name="isBookFont" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="text_shadow">
+        <attr name="useShadow" format="boolean" />
+    </declare-styleable>
+
+</resources>

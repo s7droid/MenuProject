@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayoutReceiptDetailsActivityContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+        android:id="@+id/textViewDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/menu_main_gray_light"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+        android:id="@+id/textViewRestaurantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/menu_main_orange"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/listViewReceipts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:divider="@color/menu_main_divider_color"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout_subtotal"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layoutDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkout_discount"
+                    android:textColor="@color/menu_main_gray"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:id="@+id/textViewDiscountPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/menu_main_gray_light"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkout_tip"
+                    android:textColor="@color/menu_main_gray"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:id="@+id/textViewTipTotalPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="@color/menu_main_gray_light"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkout_tax"
+                    android:textColor="@color/menu_main_gray"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:id="@+id/textViewTaxPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/menu_main_gray_light"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textViewSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textViewDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textViewTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textViewTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutTotal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp" >
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textViewTotalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/viewDivider"
+                android:layout_alignParentRight="true"
+                android:gravity="right|bottom"
+                android:includeFontPadding="false"
+                android:text="@string/checkout_total"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/textViewTotal"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/menu_main_gray_light" />
+
+            <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                android:id="@+id/textViewTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="right|bottom"
+                android:includeFontPadding="false"
+                android:textColor="@color/menu_main_gray"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.usemenu.MenuAndroidApplication.views.MenuButton
+        android:id="@+id/buttonSendEmail"
+        style="@style/Menu_Button_Orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_send_to_email"
+        android:textStyle="bold" />
+
+</LinearLayout><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/layout/activity_receipt_details.xml -->
