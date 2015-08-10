@@ -38,7 +38,12 @@
     <string name="menu_tutorial_screen_button_awesome">AWESOME</string>
     <string name="tutorial_screen_first">Order from your table\nwith your phone:</string>
     <string name="tutorial_screen_second">Enjoy your meal!</string>
-
+    <string name="tutorial_explanation_1">Order and pay from the convenience of your table</string>
+    <string name="tutorial_explanation_2">Your order is immediately routed to the kitchen and prepared</string>
+    <string name="tutorial_explanation_3">When it’s done, the waiter will know exactly where to bring it</string>
+    <string name="tutorial_explanation_4">Enjoy your meal and reorder conveniently at any time</string>
+    <string name="tutorial_continue">Continue</string>
+    <string name="tutorial_skip">Skip</string>
     <!-- Restaurant preview -->
     <string name="restaurant_preview_activity_welcome_message">Welcome to</string>
     <string name="restaurant_preview_activity_make_your_order">MAKE YOUR ORDER</string>

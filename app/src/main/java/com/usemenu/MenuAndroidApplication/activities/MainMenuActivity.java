@@ -303,7 +303,7 @@ public class MainMenuActivity extends BaseActivity implements OnIBeaconSearchRes
 	}
 
 	private void tutorialsButtonAction() {
-		startActivity(new Intent(getApplicationContext(), TutorialFirstActivity.class));
+		startActivity(new Intent(getApplicationContext(), TutorialActivity.class));
 	}
 
 	private void manageYourProfileButtonAction() {
