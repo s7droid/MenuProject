@@ -1,10 +1,5 @@
 package com.usemenu.MenuAndroidApplication.activities;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,6 +14,7 @@ import com.android.volley.Response.Listener;
 import com.usemenu.MenuAndroidApplication.R;
 import com.usemenu.MenuAndroidApplication.app.Menu;
 import com.usemenu.MenuAndroidApplication.callbacks.OnIBeaconSearchResultCallback;
+import com.usemenu.MenuAndroidApplication.utils.Settings;
 import com.usemenu.MenuAndroidApplication.utils.Utils;
 import com.usemenu.MenuAndroidApplication.volley.VolleySingleton;
 import com.usemenu.MenuAndroidApplication.volley.requests.GetBraintreeTokenRequest;
@@ -33,6 +29,11 @@ import com.usemenu.MenuAndroidApplication.volley.responses.GetDiscountResponse;
 import com.usemenu.MenuAndroidApplication.volley.responses.GetRestaurantInfoResponse;
 import com.usemenu.MenuAndroidApplication.volley.responses.GetTaxRateResponse;
 import com.usemenu.MenuAndroidApplication.volley.responses.GetTipResponse;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Splash screen activity used for getting data from server, such are connection
@@ -70,14 +71,14 @@ public class SplashActivity extends BaseActivity {
 
 				Menu.getInstance().getDataManager().setClientBraintreeToken(SplashActivity.this, token.token);
 
-//				 Settings.setStoreMajor(SplashActivity.this, "1");
-//				 Settings.setStoreMinor(SplashActivity.this, "1");
-//				 Settings.setTableMajor(SplashActivity.this, "1");
-//				 Settings.setTableMinor(SplashActivity.this, "1");
-//				 
-//				 onBeaconFound();
+				 Settings.setStoreMajor(SplashActivity.this, "1");
+				 Settings.setStoreMinor(SplashActivity.this, "1");
+				 Settings.setTableMajor(SplashActivity.this, "1");
+				 Settings.setTableMinor(SplashActivity.this, "1");
 
-				scanForIBeacon();
+				 onBeaconFound();
+
+//				scanForIBeacon();
 			}
 		});
 		VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(tokenRequest);

@@ -1,11 +1,14 @@
 package com.usemenu.MenuAndroidApplication.activities;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,7 +26,7 @@ import com.usemenu.MenuAndroidApplication.dialogs.ProgressDialog;
 import com.usemenu.MenuAndroidApplication.utils.Utils;
 import com.usemenu.MenuAndroidApplication.volley.responses.GsonResponse;
 
-public class BaseActivity extends Activity implements OnVolleyErrorCallback {
+public class BaseActivity extends ActionBarActivity implements OnVolleyErrorCallback {
 
 	private static final String TAG = BaseActivity.class.getSimpleName();
 
@@ -43,17 +46,29 @@ public class BaseActivity extends Activity implements OnVolleyErrorCallback {
 
 		// overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
-		actionBar = getActionBar();
+		actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(false);
 		actionBar.setDisplayShowHomeEnabled(false);
 		actionBar.setDisplayShowCustomEnabled(true);
 		actionBar.setDisplayShowTitleEnabled(false);
 		actionBar.setDisplayUseLogoEnabled(false);
+		actionBar.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+
 
 		LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View v = inflator.inflate(R.layout.action_bar, null);
 
 		actionBar.setCustomView(v);
+
+		Toolbar parent = (Toolbar) v.getParent();
+		parent.setContentInsetsAbsolute(0, 0);
+
+
+		// Uncomment if action bar right margin appears!
+
+//		ViewGroup.LayoutParams lp = v.getLayoutParams();
+//		lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+//		v.setLayoutParams(lp);
 
 		alertDialog = new AlertDialogFragment();
 		alertDialog.setFragmentManager(getFragmentManager(), this);

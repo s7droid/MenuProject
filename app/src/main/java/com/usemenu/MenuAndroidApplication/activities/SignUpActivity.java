@@ -1,11 +1,5 @@
 package com.usemenu.MenuAndroidApplication.activities;
 
-import io.card.payment.CardIOActivity;
-import io.card.payment.CreditCard;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
@@ -24,6 +18,7 @@ import android.widget.TextView;
 import com.android.volley.Response.Listener;
 import com.braintreepayments.api.Braintree;
 import com.braintreepayments.api.models.CardBuilder;
+import com.devmarvel.creditcardentry.library.CreditCardForm;
 import com.usemenu.MenuAndroidApplication.R;
 import com.usemenu.MenuAndroidApplication.app.Menu;
 import com.usemenu.MenuAndroidApplication.utils.Settings;
@@ -32,6 +27,12 @@ import com.usemenu.MenuAndroidApplication.views.MenuEditText;
 import com.usemenu.MenuAndroidApplication.volley.VolleySingleton;
 import com.usemenu.MenuAndroidApplication.volley.requests.SignUpRequest;
 import com.usemenu.MenuAndroidApplication.volley.responses.SignUpResponse;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import io.card.payment.CardIOActivity;
+import io.card.payment.CreditCard;
 
 public class SignUpActivity extends BaseActivity {
 
@@ -45,12 +46,13 @@ public class SignUpActivity extends BaseActivity {
 	private EditText mPasswordEditText;
 	// private EditText mNicknameEditText;
 	private EditText mRepeatPasswordEditText;
-	private EditText mCreditCardNumberEditText;
+//	private EditText mCreditCardNumberEditText;
 	private EditText mNameOnCardEditText;
-	private EditText mMonthEditText;
-	private EditText mYearEditText;
-	private EditText mCCVEditText;
+//	private EditText mMonthEditText;
+//	private EditText mYearEditText;
+//	private EditText mCCVEditText;
 	private TextView mTextViewTermsOfUse;
+	private CreditCardForm creditCardForm;
 
 	// DATA
 	private boolean isPasswordShowing = false;
@@ -106,12 +108,13 @@ public class SignUpActivity extends BaseActivity {
 		// mNicknameEditText = (EditText)
 		// findViewById(R.id.edittextSignUpActivityNickname);
 		mRepeatPasswordEditText = (EditText) findViewById(R.id.edittextSignUpActivityRepeatPassword);
-		mCreditCardNumberEditText = (EditText) findViewById(R.id.edittextSignUpActivityCardNumber);
+//		mCreditCardNumberEditText = (EditText) findViewById(R.id.edittextSignUpActivityCardNumber);
 		mNameOnCardEditText = (EditText) findViewById(R.id.edittextSignUpActivityNameOnCard);
-		mMonthEditText = (EditText) findViewById(R.id.edittextSignUpActivityMonth);
-		mYearEditText = (EditText) findViewById(R.id.edittextSignUpActivityYear);
-		mCCVEditText = (EditText) findViewById(R.id.edittextSignUpActivityCCV);
+//		mMonthEditText = (EditText) findViewById(R.id.edittextSignUpActivityMonth);
+//		mYearEditText = (EditText) findViewById(R.id.edittextSignUpActivityYear);
+//		mCCVEditText = (EditText) findViewById(R.id.edittextSignUpActivityCCV);
 		mTextViewTermsOfUse = (TextView) findViewById(R.id.textviewSignUpScanTermsOfUse);
+		creditCardForm = (CreditCardForm) findViewById(R.id.creditCardForm);
 
 		mNameOnCardEditText.requestFocus();
 		Utils.handleOutsideEditTextClick(findViewById(R.id.relativelayoutSignUpActivityContainer), this);
@@ -134,13 +137,13 @@ public class SignUpActivity extends BaseActivity {
 				} else if (mRepeatPasswordEditText.getText().toString().isEmpty()) {
 					showAlertDialog(getResources().getString(R.string.dialog_repeat_password_empty_title), getResources().getString(R.string.dialog_repeat_password_empty_content));
 					return;
-				} else if (mCreditCardNumberEditText.getText().toString().isEmpty()) {
+				} else if (creditCardForm.getCreditCard().getCardNumber().isEmpty()) {
 					showAlertDialog(getResources().getString(R.string.dialog_credit_card_number_empty_title), getResources().getString(R.string.dialog_credit_card_number_empty_content));
 					return;
-				} else if (!Utils.isValidExpiryDate(mMonthEditText.getText().toString(), mYearEditText.getText().toString())) {
+				} else if (creditCardForm.getCreditCard().getExpDate().isEmpty()) {
 					showAlertDialog(getResources().getString(R.string.dialog_invalid_expiry_date_error_title), getResources().getString(R.string.dialog_invalid_expiry_date_error_content));
 					return;
-				} else if (mCCVEditText.getText().toString().isEmpty()) {
+				} else if (creditCardForm.getCreditCard().getSecurityCode().isEmpty()) {
 					showAlertDialog(getResources().getString(R.string.dialog_cvv_empty_title), getResources().getString(R.string.dialog_cvv_empty_content));
 					return;
 				} else if (!mPasswordEditText.getText().toString().equals(mRepeatPasswordEditText.getText().toString())) {
@@ -195,8 +198,9 @@ public class SignUpActivity extends BaseActivity {
 					}
 				});
 
-				CardBuilder cardBuilder = new CardBuilder().cardNumber(mCreditCardNumberEditText.getText().toString()).expirationDate(
-						mMonthEditText.getText().toString() + "/" + mYearEditText.getText().toString());
+				com.devmarvel.creditcardentry.library.CreditCard card = creditCardForm.getCreditCard();
+
+				CardBuilder cardBuilder = new CardBuilder().cardNumber(card.getCardNumber()).expirationDate(card.getExpDate()).cvv(card.getSecurityCode());
 				braintree.tokenize(cardBuilder);
 			}
 		});
@@ -351,26 +355,26 @@ public class SignUpActivity extends BaseActivity {
 			// Never log a raw card number. Avoid displaying it, but if
 			// necessary use getFormattedCardNumber()
 
-			creditCardNumber = scanResult.getRedactedCardNumber();
-			// mCreditCardNumberEditText.setText(creditCardNumber);
-			mCreditCardNumberEditText.setText(scanResult.getFormattedCardNumber());
+			creditCardNumber = scanResult.getFormattedCardNumber();
 
 			if (scanResult.isExpiryValid()) {
-				Log.d("dialog", "Month= " + (scanResult.expiryMonth < 10 ? ("0" + String.valueOf(scanResult.expiryMonth)) : String.valueOf(scanResult.expiryMonth)));
-				Log.d("dialog", "Year= " + String.valueOf(scanResult.expiryYear));
 				String year = String.valueOf(scanResult.expiryYear).substring(2, 4);
-				mYearEditText.setText(year);
-				mMonthEditText.setText(scanResult.expiryMonth < 10 ? ("0" + String.valueOf(scanResult.expiryMonth)) : String.valueOf(scanResult.expiryMonth));
-			}
 
-			if (scanResult.cvv != null) {
-				mCCVEditText.setText(scanResult.cvv);
-			}
+				creditCardForm.setCardNumber(creditCardNumber, true);
+				creditCardForm.setExpDate((scanResult.expiryMonth < 10 ? ("0" + String.valueOf(scanResult.expiryMonth)) : String.valueOf(scanResult.expiryMonth)) + "/" + year, true);
 
-			mCreditCardNumberEditText.setTextColor(getResources().getColor(R.color.menu_main_gray));
-			mMonthEditText.setTextColor(getResources().getColor(R.color.menu_main_gray));
-			mYearEditText.setTextColor(getResources().getColor(R.color.menu_main_gray));
-			mCCVEditText.setTextColor(getResources().getColor(R.color.menu_main_gray));
+				if (scanResult.cvv != null) {
+					creditCardForm.setSecurityCode(scanResult.cvv, true);
+				}
+
+				creditCardForm.postDelayed(new Runnable() {
+					@Override
+					public void run() {
+						creditCardForm.focusSecurityCode();
+						creditCardForm.setCVVCursorAtEnd();
+					}
+				}, 500);
+			}
 
 		}
 	}
