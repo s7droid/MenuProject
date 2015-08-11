@@ -74,7 +74,7 @@ public class SplashActivity extends BaseActivity {
 //				 Settings.setStoreMinor(SplashActivity.this, "1");
 //				 Settings.setTableMajor(SplashActivity.this, "1");
 //				 Settings.setTableMinor(SplashActivity.this, "1");
-//				 
+//
 //				 onBeaconFound();
 
 				scanForIBeacon();

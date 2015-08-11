@@ -61,7 +61,7 @@ public class RestaurantPreviewActivity extends BaseActivity {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(RestaurantPreviewActivity.this, CategoryMealsActivity.class));
+				startActivity(new Intent(RestaurantPreviewActivity.this, CategoryMealsActivityNew.class));
 			}
 		});
 

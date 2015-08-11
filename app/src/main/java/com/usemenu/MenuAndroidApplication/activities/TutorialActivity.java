@@ -138,12 +138,9 @@ public class TutorialActivity extends BaseActivity {
             final RelativeLayout content = (RelativeLayout) inflater.inflate(R.layout.tutorial_pager_item, null);
 
             content.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
-            //     content.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM);
             final TextView message = (TextView) content.findViewById(R.id.tutorialMessage);
             final ImageView image = (ImageView) content.findViewById(R.id.tutorialImage);
             final RelativeLayout imageContainer = (RelativeLayout) content.findViewById(R.id.relativeLayout);
-
-//            image.setBackgroundColor(getResources().getColor(R.color.menu_main_gray_light));
 
             if (position == 0) {
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -158,13 +155,6 @@ public class TutorialActivity extends BaseActivity {
                 message.setText(context.getResources().getString(R.string.tutorial_explanation_1));
                 image.setImageResource(R.drawable.tutorial_step_1);
             } else if (position == 1) {
-//                RelativeLayout.LayoutParams paramsImage = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-//                paramsImage.addRule(RelativeLayout.CENTER_IN_PARENT);
-//                image.setLayoutParams(paramsImage);
-
-//                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-//                params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
-//                imageContainer.setLayoutParams(params);
                 message.setText(context.getResources().getString(R.string.tutorial_explanation_2));
                 message.setBackgroundColor(Color.parseColor("#fcfcfc"));
 
@@ -179,9 +169,6 @@ public class TutorialActivity extends BaseActivity {
 
                 image.setBackground(drawable);
             } else if (position == 2) {
-//                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
-//                params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
-//                imageContainer.setLayoutParams(params);
                 message.setText(context.getResources().getString(R.string.tutorial_explanation_3));
                 message.setBackgroundColor(Color.parseColor("#fcfcfc"));
 

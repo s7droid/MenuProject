@@ -1,10 +1,5 @@
 package com.usemenu.MenuAndroidApplication.activities;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -15,11 +10,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.android.volley.Response.Listener;
@@ -34,175 +27,180 @@ import com.usemenu.MenuAndroidApplication.volley.VolleySingleton;
 import com.usemenu.MenuAndroidApplication.volley.requests.GetCategoriesRequest;
 import com.usemenu.MenuAndroidApplication.volley.responses.GetCategoriesResponse;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Activity for presenting all meal categories from one restaurant. <br>
  * Categories are sorted, and implemented into grid view list.
- * 
- * @author s7Design
  *
+ * @author s7Design
  */
 public class CategoryMealsActivity extends BaseActivity {
 
-	public static final String INTENT_EXTRA_CATEGORY_TAG = "category_tag";
 
-	// VIEWS
-	private GridView mCategoryGridView;
-	// DATA
-	private ArrayList<Category> categories;
+    public static final String INTENT_EXTRA_CATEGORY_TAG = "category_tag";
 
-	private int width = 0;
+    // VIEWS
+    private GridView mCategoryGridView;
+    // DATA
+    private ArrayList<Category> categories;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_category_meals);
+    private int width = 0;
 
-		initActionBar();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_category_meals);
 
-		Map<String, String> params = new HashMap<String, String>();
-		params.put("major", Settings.getStoreMajor(CategoryMealsActivity.this));
-		params.put("minor", Settings.getStoreMinor(CategoryMealsActivity.this));
-		params.put("lang", "en");
+        initActionBar();
 
-		GetCategoriesRequest request = new GetCategoriesRequest(this, params, new Listener<GetCategoriesResponse>() {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("major", Settings.getStoreMajor(CategoryMealsActivity.this));
+        params.put("minor", Settings.getStoreMinor(CategoryMealsActivity.this));
+        params.put("lang", "en");
 
-			@Override
-			public void onResponse(GetCategoriesResponse categories) {
+        GetCategoriesRequest request = new GetCategoriesRequest(this, params, new Listener<GetCategoriesResponse>() {
 
-				CategoryMealsActivity.this.categories = new ArrayList<Category>(Arrays.asList(categories.categories));
-				Menu.getInstance().getDataManager().setCategoriesList(CategoryMealsActivity.this.categories);
+            @Override
+            public void onResponse(GetCategoriesResponse categories) {
 
-				initViews();
-				dismissProgressDialog();
+                CategoryMealsActivity.this.categories = new ArrayList<Category>(Arrays.asList(categories.categories));
+                Menu.getInstance().getDataManager().setCategoriesList(CategoryMealsActivity.this.categories);
 
-			}
-		});
+                initViews();
+                dismissProgressDialog();
 
-		showProgressDialogLoading();
-		VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
+            }
+        });
 
-		Display display = getWindowManager().getDefaultDisplay();
-		Point size = new Point();
-		display.getSize(size);
-		width = (int) (size.x - Utils.convertDpToPixel(45, this)) / 2;
+        showProgressDialogLoading();
+        VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
 
-	}
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        width = (int) (size.x - Utils.convertDpToPixel(45, this)) / 2;
 
-	@Override
-	protected void onResume() {
-		super.onResume();
+    }
 
-		if (Menu.getInstance().getDataManager().isCheckoutListEmpty())
-			hideRightActionBarButton();
-		else
-			showRightActionBarButton();
-	}
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-	/**
-	 * Method for initializing all views in {@link CategoryMealsActivity}
-	 */
-	private void initViews() {
+        if (Menu.getInstance().getDataManager().isCheckoutListEmpty())
+            hideRightActionBarButton();
+        else
+            showRightActionBarButton();
+    }
 
-		mCategoryGridView = (GridView) findViewById(R.id.gridviewCategoryMealsActivity);
-		mCategoryGridView.setAdapter(new CategoriesAdapter(CategoryMealsActivity.this));
+    /**
+     * Method for initializing all views in {@link CategoryMealsActivity}
+     */
+    private void initViews() {
 
-		mCategoryGridView.setOnItemClickListener(new OnItemClickListener() {
+        mCategoryGridView = (GridView) findViewById(R.id.gridviewCategoryMealsActivity);
+        mCategoryGridView.setAdapter(new CategoriesAdapter(CategoryMealsActivity.this));
 
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Intent intent = new Intent(Menu.getContext(), OrderMealsActivity.class);
-				intent.putExtra(INTENT_EXTRA_CATEGORY_TAG, categories.get(position).tag);
-				startActivity(intent);
-			}
-		});
+        mCategoryGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-	}
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Menu.getContext(), OrderMealsActivity.class);
+                intent.putExtra(INTENT_EXTRA_CATEGORY_TAG, categories.get(position).tag);
+                startActivity(intent);
+            }
+        });
 
-	private void initActionBar() {
-		setActionBarBackButtonVisibility(View.INVISIBLE);
-		setActionBarForwardButtonText(R.string.action_bar_checkout);
+    }
 
-		setActionBarForwardButtonOnClickListener(new OnClickListener() {
+    private void initActionBar() {
+        setActionBarBackButtonVisibility(View.INVISIBLE);
+        setActionBarForwardButtonText(R.string.action_bar_checkout);
 
-			@Override
-			public void onClick(View v) {
-				if (Menu.getInstance().getDataManager().getCheckoutList() != null)
-					startActivity(new Intent(getApplicationContext(), CheckoutActivity.class));
-				else
-					showAlertDialog("Alert", "Your checkout list is empty. Add some things to Your chart.");
-			}
-		});
+        setActionBarForwardButtonOnClickListener(new OnClickListener() {
 
-		setActionBarBackButtonOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Menu.getInstance().getDataManager().getCheckoutList() != null)
+                    startActivity(new Intent(getApplicationContext(), CheckoutActivity.class));
+                else
+                    showAlertDialog("Alert", "Your checkout list is empty. Add some things to Your chart.");
+            }
+        });
 
-			@Override
-			public void onClick(View v) {
+        setActionBarBackButtonOnClickListener(new OnClickListener() {
 
-			}
-		});
-	}
+            @Override
+            public void onClick(View v) {
 
-	class CategoriesAdapter extends BaseAdapter {
+            }
+        });
+    }
 
-		private LayoutInflater mInflater;
-		private ImageLoader imageLoader;
+    class CategoriesAdapter extends BaseAdapter {
 
-		public CategoriesAdapter(Context context) {
-			mInflater = LayoutInflater.from(context);
-			imageLoader = VolleySingleton.getInstance(getApplicationContext()).getImageLoader();
-		}
+        private LayoutInflater mInflater;
+        private ImageLoader imageLoader;
 
-		@Override
-		public int getCount() {
-			return categories.size();
-		}
+        public CategoriesAdapter(Context context) {
+            mInflater = LayoutInflater.from(context);
+            imageLoader = VolleySingleton.getInstance(getApplicationContext()).getImageLoader();
+        }
 
-		@Override
-		public Category getItem(int position) {
-			return categories.get(position);
-		}
+        @Override
+        public int getCount() {
+            return categories.size();
+        }
 
-		@Override
-		public long getItemId(int position) {
-			return 0;
-		}
+        @Override
+        public Category getItem(int position) {
+            return categories.get(position);
+        }
 
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
 
-			if (convertView == null) {
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
 
-				convertView = mInflater.inflate(R.layout.grid_item_meals_category, null);
+            if (convertView == null) {
 
-				ViewHolder holder = new ViewHolder();
+                convertView = mInflater.inflate(R.layout.grid_item_meals_category, null);
 
-				holder.categoryImage = (NetworkImageView) convertView.findViewById(R.id.imageviewCategoryMealsGridViewItemImage);
-				holder.categoryTitle = (TextView) convertView.findViewById(R.id.textviewCategoryMealsGridViewItemTitle);
+                ViewHolder holder = new ViewHolder();
 
-				convertView.setTag(holder);
-			}
+                holder.categoryImage = (NetworkImageView) convertView.findViewById(R.id.imageviewCategoryMealsGridViewItemImage);
+                holder.categoryTitle = (TextView) convertView.findViewById(R.id.textviewCategoryMealsGridViewItemTitle);
 
-			ViewHolder holder = (ViewHolder) convertView.getTag();
+                convertView.setTag(holder);
+            }
 
-			RelativeLayout.LayoutParams params = (LayoutParams) holder.categoryImage.getLayoutParams();
-			params.width = width;
-			params.height = width;
-			holder.categoryImage.setLayoutParams(params);
+            ViewHolder holder = (ViewHolder) convertView.getTag();
 
-			holder.categoryImage.setImageUrl(getItem(position).image, imageLoader);
-			holder.categoryImage.setDefaultImageResId(R.drawable.no_image);
-			holder.categoryImage.setErrorImageResId(R.drawable.no_image);
+            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) holder.categoryImage.getLayoutParams();
+            params.width = width;
+            params.height = width;
+            holder.categoryImage.setLayoutParams(params);
 
-			holder.categoryTitle.setText(getItem(position).name);
+            holder.categoryImage.setImageUrl(getItem(position).image, imageLoader);
+            holder.categoryImage.setDefaultImageResId(R.drawable.no_image);
+            holder.categoryImage.setErrorImageResId(R.drawable.no_image);
 
-			return convertView;
-		}
+            holder.categoryTitle.setText(getItem(position).name);
 
-		class ViewHolder {
-			TextView categoryTitle;
-			NetworkImageView categoryImage;
-		}
+            return convertView;
+        }
 
-	}
+        class ViewHolder {
+            TextView categoryTitle;
+            NetworkImageView categoryImage;
+        }
+
+    }
 
 }
