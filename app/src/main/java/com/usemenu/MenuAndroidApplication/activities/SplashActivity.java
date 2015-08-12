@@ -35,7 +35,11 @@ import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import static com.usemenu.MenuAndroidApplication.app.Constants.*;
+import static com.usemenu.MenuAndroidApplication.app.Constants.INTENT_EXTRA_START_BLUETOOTH;
+import static com.usemenu.MenuAndroidApplication.app.Constants.INTENT_EXTRA_START_LOCATION;
+import static com.usemenu.MenuAndroidApplication.app.Constants.INTENT_EXTRA_TAG_START;
+import static com.usemenu.MenuAndroidApplication.app.Constants.REQUEST_CODE_BLUETOOTH;
+import static com.usemenu.MenuAndroidApplication.app.Constants.REQUEST_CODE_LOCATION;
 
 /**
  * Splash screen activity used for getting data from server, such are connection
@@ -96,13 +100,13 @@ public class SplashActivity extends BaseActivity {
         } else if (!Utils.isLocationEnabled(this)) {
 
             Intent intent = new Intent(this, SplashWarningActivity.class);
-            intent.putExtra(SplashWarningActivity.INTENT_EXTRA_TAG_START, SplashWarningActivity.INTENT_EXTRA_START_LOCATION);
+            intent.putExtra(INTENT_EXTRA_TAG_START, INTENT_EXTRA_START_LOCATION);
             startActivityForResult(intent, REQUEST_CODE_LOCATION);
 
         } else if (!Utils.isBluetoothEnabled()) {
 
             Intent intent = new Intent(this, SplashWarningActivity.class);
-            intent.putExtra(SplashWarningActivity.INTENT_EXTRA_TAG_START, SplashWarningActivity.INTENT_EXTRA_START_BLUETOOTH);
+            intent.putExtra(INTENT_EXTRA_TAG_START, INTENT_EXTRA_START_BLUETOOTH);
             startActivityForResult(intent, REQUEST_CODE_BLUETOOTH);
 
             // OkCancelDialogFragment okCancelDialog = new
@@ -174,7 +178,7 @@ public class SplashActivity extends BaseActivity {
             } else {
                 if (!Utils.isBluetoothEnabled()) {
                     Intent intent = new Intent(this, SplashWarningActivity.class);
-                    intent.putExtra(SplashWarningActivity.INTENT_EXTRA_TAG_START, SplashWarningActivity.INTENT_EXTRA_START_BLUETOOTH);
+                    intent.putExtra(INTENT_EXTRA_TAG_START, INTENT_EXTRA_START_BLUETOOTH);
                     startActivityForResult(intent, REQUEST_CODE_BLUETOOTH);
                 } else {
                     getBraintreeToken();
@@ -186,7 +190,7 @@ public class SplashActivity extends BaseActivity {
             } else {
                 if (!Utils.isLocationEnabled(this)) {
                     Intent intent = new Intent(this, SplashWarningActivity.class);
-                    intent.putExtra(SplashWarningActivity.INTENT_EXTRA_TAG_START, SplashWarningActivity.INTENT_EXTRA_START_LOCATION);
+                    intent.putExtra(INTENT_EXTRA_TAG_START, INTENT_EXTRA_START_LOCATION);
                     startActivityForResult(intent, REQUEST_CODE_LOCATION);
 
                 } else {
