@@ -101,11 +101,13 @@
     <string name="dialog_please_login_again">Please login again</string>
     <string name="dialog_account_lockedout_title">Oops!</string>
     <string name="dialog_account_lockedout_content">For security reasons, logins to your account were blocked. Please try again in 5 minutes or reset your password if you forgot it.</string>
+    <string name="dialog_confirm_your_order">CONFIRM YOUR ORDER</string>
+    <string name="dialog_serve_all_courses_at_once">Serve all courses at once?</string>
 
     <!-- Checkout activity -->
     <string name="checkout_thank_you_for_order">Thank you for your order!</string>
     <string name="checkout_receipt_sent"> A receipt has been sent to your email.</string>
-    <string name="checkout_tip_col">TIP:</string>
+    <string name="checkout_tip_col">Tip</string>
     <string name="checkout_subtotal">SUBTOTAL</string>
     <string name="checkout_tax">VAT</string>
     <string name="checkout_tip">TIP</string>
@@ -176,6 +178,8 @@
     <string name="misc_splash">Welcome to MENU</string>
     <string name="misc_table">Table</string>
     <string name="misc_at">at</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 
     <!-- Error messages -->
     <string name="error_message_basic">Some error acquired. We weren\'t able to finish Your request. Please, try again later.</string>

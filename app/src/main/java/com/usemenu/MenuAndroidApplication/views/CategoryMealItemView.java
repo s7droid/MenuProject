@@ -17,6 +17,7 @@ import com.usemenu.MenuAndroidApplication.dataclasses.Item;
 import com.usemenu.MenuAndroidApplication.utils.Utils;
 import com.usemenu.MenuAndroidApplication.volley.VolleySingleton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,14 +31,16 @@ public class CategoryMealItemView extends LinearLayout implements View.OnClickLi
     private List<Item> item;
     private Activity context;
     private ImageLoader imageLoader;
+    private List<Category> categories;
     private List<Item> allItems; // the list of all items. Here are included subcategories and categories, and onClick, this list will be filtered with only items from certain subcategory
 
-    public CategoryMealItemView(Activity context, Category category, List<Item> item, List<Item> allItems) {
+    public CategoryMealItemView(Activity context, Category category, List<Item> item, List<Item> allItems, List<Category> categories) {
         super(context);
         this.category = category;
         this.item = item;
         this.context = context;
         this.allItems = allItems;
+        this.categories = categories;
         imageLoader = VolleySingleton.getInstance(context).getImageLoader();
         init();
     }
@@ -111,7 +114,31 @@ public class CategoryMealItemView extends LinearLayout implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        if ((String) view.getTag() != null && !((String) view.getTag()).isEmpty())
-            Toast.makeText(getContext(), (String) view.getTag(), Toast.LENGTH_SHORT).show();
+        if ((String) view.getTag() != null && !((String) view.getTag()).isEmpty()) {
+            int position = 0;
+
+            for (int i = 0; i < allItems.size(); ++i) {
+                if (allItems.get(i).name.equalsIgnoreCase((String) view.getTag())) {
+                    position = i + 1;
+                }
+            }
+
+            List<Item> subCategoryItems = new ArrayList<Item>();
+            for (int i = position; i < allItems.size(); ++i) {
+                if (!allItems.get(i).image.equalsIgnoreCase("subcat")) {
+                    subCategoryItems.add(allItems.get(i));
+                }
+
+                if (allItems.get(i).image.equalsIgnoreCase("subcat"))
+                    break;
+            }
+
+            String it = "";
+            for (Item item : allItems) {
+                it.concat("\n" + item.name);
+            }
+            Toast.makeText(getContext(), "SubCategory list size= " + subCategoryItems.size() + "\n All items list size= " + allItems.size(), Toast.LENGTH_SHORT).show();
+
+        }
     }
 }

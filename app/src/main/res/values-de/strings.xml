@@ -99,7 +99,7 @@
     <!-- Checkout activity -->
     <string name="checkout_thank_you_for_order">Vielen Dank für Deine Bestellung!</string>
     <string name="checkout_receipt_sent">Die Quittung wurde in dieser App hinterlegt.</string>
-    <string name="checkout_tip_col">TIP:</string>
+    <string name="checkout_tip_col">Tip</string>
     <string name="checkout_subtotal">SUMME</string>
     <string name="checkout_tax">MWST</string>
     <string name="checkout_tip">TIP</string>

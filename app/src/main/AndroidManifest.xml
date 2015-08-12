@@ -97,6 +97,9 @@
         <activity
             android:name="com.usemenu.MenuAndroidApplication.activities.CategoryMealsActivityNew"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.usemenu.MenuAndroidApplication.activities.MealSubCategoriesActivity"
+            android:screenOrientation="portrait" />
 
         <!-- Activities from card.io library -->
         <activity

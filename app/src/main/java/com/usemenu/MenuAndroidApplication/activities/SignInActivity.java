@@ -1,8 +1,5 @@
 package com.usemenu.MenuAndroidApplication.activities;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,169 +19,174 @@ import com.usemenu.MenuAndroidApplication.volley.requests.LoginRequest;
 import com.usemenu.MenuAndroidApplication.volley.responses.ForgotPasswordResponse;
 import com.usemenu.MenuAndroidApplication.volley.responses.LoginResponse;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.usemenu.MenuAndroidApplication.app.Constants.*;
+
 public class SignInActivity extends BaseActivity {
 
-	// VIEWS
-	private EditText mUsernameEditText;
-	private EditText mPasswordEditText;
-	private TextView mForgottPasswordButton;
-	private TextView mRegisterButton;
-	private Button mSignInButton;
+    // VIEWS
+    private EditText mUsernameEditText;
+    private EditText mPasswordEditText;
+    private TextView mForgottPasswordButton;
+    private TextView mRegisterButton;
+    private Button mSignInButton;
 
-	// DATA
-	private static int REQUEST_SIGN_UP = 54321;
+    // DATA
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_sign_in);
-		initActionBar();
-		initViews();
-	}
 
-	private void initActionBar() {
-		setActionBarMenuButtonVisibility(View.INVISIBLE);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sign_in);
+        initActionBar();
+        initViews();
+    }
 
-		setActionBarForwardArrowVisibility(null);
-		setActionBarForwardButtonText(getResources().getString(R.string.action_bar_sign_in));
-		setActionBarForwardButtonTextColor(getResources().getColor(R.color.menu_main_orange));
+    private void initActionBar() {
+        setActionBarMenuButtonVisibility(View.INVISIBLE);
 
-		setActionBarMenuButtonOnClickListener(new OnClickListener() {
+        setActionBarForwardArrowVisibility(null);
+        setActionBarForwardButtonText(getResources().getString(R.string.action_bar_sign_in));
+        setActionBarForwardButtonTextColor(getResources().getColor(R.color.menu_main_orange));
 
-			@Override
-			public void onClick(View v) {
+        setActionBarMenuButtonOnClickListener(new OnClickListener() {
 
-			}
-		});
+            @Override
+            public void onClick(View v) {
 
-		setActionBarBackButtonOnClickListener(new OnClickListener() {
+            }
+        });
 
-			@Override
-			public void onClick(View v) {
-				finish();
-			}
-		});
-	}
+        setActionBarBackButtonOnClickListener(new OnClickListener() {
 
-	private void initViews() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
 
-		mUsernameEditText = (EditText) findViewById(R.id.edittextSignInActivityUsername);
-		mPasswordEditText = (EditText) findViewById(R.id.edittextSignInActivityPassword);
-		mForgottPasswordButton = (TextView) findViewById(R.id.textviewSignInActivityForgotPassword);
-		mRegisterButton = (TextView) findViewById(R.id.textviewSignInActivitySignUp);
-		mSignInButton = (Button) findViewById(R.id.buttonSignInActivitySignin);
+    private void initViews() {
 
-		mUsernameEditText.requestFocus();
-		Utils.handleOutsideEditTextClick(findViewById(R.id.relativelayoutSignInActivityContainer), this);
+        mUsernameEditText = (EditText) findViewById(R.id.edittextSignInActivityUsername);
+        mPasswordEditText = (EditText) findViewById(R.id.edittextSignInActivityPassword);
+        mForgottPasswordButton = (TextView) findViewById(R.id.textviewSignInActivityForgotPassword);
+        mRegisterButton = (TextView) findViewById(R.id.textviewSignInActivitySignUp);
+        mSignInButton = (Button) findViewById(R.id.buttonSignInActivitySignin);
 
-		mRegisterButton.setOnClickListener(new OnClickListener() {
+        mUsernameEditText.requestFocus();
+        Utils.handleOutsideEditTextClick(findViewById(R.id.relativelayoutSignInActivityContainer), this);
 
-			@Override
-			public void onClick(View v) {
-				startActivityForResult(new Intent(getApplicationContext(), SignUpActivity.class), REQUEST_SIGN_UP);
-			}
-		});
+        mRegisterButton.setOnClickListener(new OnClickListener() {
 
-		mForgottPasswordButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(getApplicationContext(), SignUpActivity.class), REQUEST_SIGN_UP);
+            }
+        });
 
-			@Override
-			public void onClick(View v) {
+        mForgottPasswordButton.setOnClickListener(new OnClickListener() {
 
-				if (mUsernameEditText.getText().toString().equals("")) {
-					showAlertDialog(null, getResources().getString(R.string.dialog_insert_email_address));
-					return;
-				}
+            @Override
+            public void onClick(View v) {
 
-				showProgressDialogLoading();
-				Map<String, String> params = new HashMap<String, String>();
-				params.put("email", mUsernameEditText.getText().toString());
+                if (mUsernameEditText.getText().toString().equals("")) {
+                    showAlertDialog(null, getResources().getString(R.string.dialog_insert_email_address));
+                    return;
+                }
 
-				ForgotPasswordRequest forgotPasswordRequest = new ForgotPasswordRequest(SignInActivity.this, params,
-						new Listener<ForgotPasswordResponse>() {
+                showProgressDialogLoading();
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("email", mUsernameEditText.getText().toString());
 
-							@Override
-							public void onResponse(ForgotPasswordResponse forgotPasswordResponse) {
+                ForgotPasswordRequest forgotPasswordRequest = new ForgotPasswordRequest(SignInActivity.this, params,
+                        new Listener<ForgotPasswordResponse>() {
 
-								dismissProgressDialog();
+                            @Override
+                            public void onResponse(ForgotPasswordResponse forgotPasswordResponse) {
 
-								if (forgotPasswordResponse.response != null && forgotPasswordResponse.response.equals("success")) {
+                                dismissProgressDialog();
 
-									showAlertDialog(R.string.dialog_check_inbox_title, R.string.dialog_check_inbox_content);
-								} else if (forgotPasswordResponse.response != null
-										&& forgotPasswordResponse.response.equals(ForgotPasswordResponse.USER_DOESNT_EXIST)) {
+                                if (forgotPasswordResponse.response != null && forgotPasswordResponse.response.equals("success")) {
 
-									showAlertDialog(R.string.dialog_no_user_title, R.string.dialog_no_user);
-								}
-							}
-						});
+                                    showAlertDialog(R.string.dialog_check_inbox_title, R.string.dialog_check_inbox_content);
+                                } else if (forgotPasswordResponse.response != null
+                                        && forgotPasswordResponse.response.equals(ForgotPasswordResponse.USER_DOESNT_EXIST)) {
 
-				VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(forgotPasswordRequest);
-			}
-		});
+                                    showAlertDialog(R.string.dialog_no_user_title, R.string.dialog_no_user);
+                                }
+                            }
+                        });
 
-		mSignInButton.setOnClickListener(new OnClickListener() {
+                VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(forgotPasswordRequest);
+            }
+        });
 
-			@Override
-			public void onClick(View v) {
+        mSignInButton.setOnClickListener(new OnClickListener() {
 
-				if (Utils.isNetworkAvailable(getApplicationContext())) {
-					if (mUsernameEditText.getText().toString().equals("")) {
-						showAlertDialog(null, getResources().getString(R.string.dialog_insert_email_address));
-					} else if (mPasswordEditText.getText().toString().equals("")) {
-						showAlertDialog(null, getResources().getString(R.string.dialog_insert_password));
-					} else {
+            @Override
+            public void onClick(View v) {
 
-						showProgressDialogLoading();
+                if (Utils.isNetworkAvailable(getApplicationContext())) {
+                    if (mUsernameEditText.getText().toString().equals("")) {
+                        showAlertDialog(null, getResources().getString(R.string.dialog_insert_email_address));
+                    } else if (mPasswordEditText.getText().toString().equals("")) {
+                        showAlertDialog(null, getResources().getString(R.string.dialog_insert_password));
+                    } else {
 
-						Map<String, String> params = new HashMap<String, String>();
-						params.put("email", mUsernameEditText.getText().toString());
-						params.put("password", mPasswordEditText.getText().toString());
+                        showProgressDialogLoading();
 
-						LoginRequest loginRequest = new LoginRequest(SignInActivity.this, params, new Listener<LoginResponse>() {
+                        Map<String, String> params = new HashMap<String, String>();
+                        params.put("email", mUsernameEditText.getText().toString());
+                        params.put("password", mPasswordEditText.getText().toString());
 
-							@Override
-							public void onResponse(LoginResponse loginResponse) {
+                        LoginRequest loginRequest = new LoginRequest(SignInActivity.this, params, new Listener<LoginResponse>() {
 
-								if (loginResponse.response != null && loginResponse.response.equals("success")) {
-									Settings.setAccessToken(SignInActivity.this, loginResponse.accesstoken);
-									Intent intent = new Intent();
-									setResult(RESULT_OK, intent);
-									dismissProgressDialog();
-									finish();
-								} else {
-									dismissProgressDialog();
+                            @Override
+                            public void onResponse(LoginResponse loginResponse) {
 
-									if (loginResponse.response != null && loginResponse.response.equals("nouser")) {
-										showAlertDialog(R.string.dialog_no_user_title, R.string.dialog_no_user);
-									} else if (loginResponse.response.equals("passwordfalse")) {
-										showAlertDialog(R.string.dialog_wrong_password_title, R.string.dialog_wrong_password);
-									} else if (loginResponse.response.equals("lockedout")) {
-										showAlertDialog(R.string.dialog_account_lockedout_title, R.string.dialog_account_lockedout_content);
-									}
+                                if (loginResponse.response != null && loginResponse.response.equals("success")) {
+                                    Settings.setAccessToken(SignInActivity.this, loginResponse.accesstoken);
+                                    Intent intent = new Intent();
+                                    setResult(RESULT_OK, intent);
+                                    dismissProgressDialog();
+                                    finish();
+                                } else {
+                                    dismissProgressDialog();
 
-								}
-							}
-						});
+                                    if (loginResponse.response != null && loginResponse.response.equals("nouser")) {
+                                        showAlertDialog(R.string.dialog_no_user_title, R.string.dialog_no_user);
+                                    } else if (loginResponse.response.equals("passwordfalse")) {
+                                        showAlertDialog(R.string.dialog_wrong_password_title, R.string.dialog_wrong_password);
+                                    } else if (loginResponse.response.equals("lockedout")) {
+                                        showAlertDialog(R.string.dialog_account_lockedout_title, R.string.dialog_account_lockedout_content);
+                                    }
 
-						VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(loginRequest);
-					}
+                                }
+                            }
+                        });
 
-				} else {
-					showAlertDialog(R.string.dialog_no_internet_connection_title, R.string.dialog_no_internet_connection_message);
-				}
-			}
-		});
+                        VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(loginRequest);
+                    }
 
-	}
+                } else {
+                    showAlertDialog(R.string.dialog_no_internet_connection_title, R.string.dialog_no_internet_connection_message);
+                }
+            }
+        });
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		if (resultCode == Activity.RESULT_OK) {
-			if (requestCode == REQUEST_SIGN_UP) {
+    }
 
-			}
-		}
-	}
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+            if (requestCode == REQUEST_SIGN_UP) {
+
+            }
+        }
+    }
 
 }

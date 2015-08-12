@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="17dp"
+    android:layout_marginRight="17dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_confirm_your_order"
+            android:textColor="@color/menu_main_orange"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/menu_main_divider_color" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_serve_all_courses_at_once"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <com.usemenu.MenuAndroidApplication.views.MenuButton
+            android:id="@+id/buttonNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/menu_main_gray_light"
+            android:text="@string/no"
+            android:textColor="@android:color/white"
+            android:textSize="21sp" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuButton
+            android:id="@+id/buttonYes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/menu_main_orange"
+            android:text="@string/yes"
+            android:textColor="@android:color/white"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+</LinearLayout>

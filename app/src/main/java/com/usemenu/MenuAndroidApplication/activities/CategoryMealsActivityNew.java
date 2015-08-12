@@ -103,7 +103,7 @@ public class CategoryMealsActivityNew extends BaseActivity {
                     categoryItems.add(item);
             }
 
-            CategoryMealItemView v = new CategoryMealItemView(this, category, categoryItems,CategoryMealsActivityNew.this.items);
+            CategoryMealItemView v = new CategoryMealItemView(this, category, categoryItems,CategoryMealsActivityNew.this.items,categories);
             categoriesContainer.addView(v);
         }
 

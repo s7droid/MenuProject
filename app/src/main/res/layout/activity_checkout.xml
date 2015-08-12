@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <com.usemenu.MenuAndroidApplication.views.MenuTextView
         android:id="@+id/textViewDesc"
@@ -30,8 +30,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical" >
+        android:layout_weight="6"
+        android:orientation="vertical">
 
         <ListView
             android:id="@+id/listView"
@@ -45,15 +45,14 @@
             android:divider="@color/menu_main_divider_color"
             android:dividerHeight="1dp"
             android:listSelector="@android:color/transparent"
-            android:scrollbars="none" >
-        </ListView>
+            android:scrollbars="none"></ListView>
 
         <LinearLayout
             android:id="@+id/layoutAddMore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <com.usemenu.MenuAndroidApplication.views.CircleButtonView
                 android:id="@+id/circleButtonAdd"
@@ -66,91 +65,143 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="bottom"
-        android:orientation="vertical" >
+        android:layout_weight="4"
+        android:background="@color/menu_background_gray"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/separator_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@+id/layoutSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginRight="45dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical" >
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
 
-            <RelativeLayout
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" >-->
+
+            <!--<com.usemenu.MenuAndroidApplication.views.MenuTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:text="@string/checkout_tip_col"-->
+            <!--android:textColor="@color/menu_main_gray"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<com.usemenu.MenuAndroidApplication.views.MenuTextView-->
+            <!--android:id="@+id/textViewTipPercent"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:textColor="@color/menu_main_gray"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</RelativeLayout>-->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-                <com.usemenu.MenuAndroidApplication.views.MenuTextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="15dp"
-                    android:text="@string/checkout_tip_col"
-                    android:textColor="@color/menu_main_gray"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4">
 
-                <com.usemenu.MenuAndroidApplication.views.MenuTextView
-                    android:id="@+id/textViewTipPercent"
-                    android:layout_width="wrap_content"
+                    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/checkout_tip_col"
+                        android:textColor="@color/menu_main_orange"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                        android:id="@+id/textviewTipChangebleValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/checkout_tip_col"
+                        android:textColor="@color/menu_main_gray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/menu_main_gray"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="6"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:background="@color/bt_very_light_gray"
+                    android:padding="0dp"
+                    android:progressDrawable="@drawable/progress_bar"
+                    android:thumb="@drawable/progress_bar_thumb" />
 
-            <SeekBar
-                android:id="@+id/seekBar"
+            </LinearLayout>
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxHeight="10dp"
-                android:minHeight="10dp"
-                android:progressDrawable="@drawable/progress_bar"
-                android:thumb="@drawable/progress_bar_thumb" />
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/menu_main_divider_color" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" >-->
 
-                <com.usemenu.MenuAndroidApplication.views.MenuTextView
-                    android:id="@+id/textViewMinTip"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="15dp"
-                    android:text="0%"
-                    android:textColor="@color/menu_main_gray_light"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+            <!--<com.usemenu.MenuAndroidApplication.views.MenuTextView-->
+            <!--android:id="@+id/textViewMinTip"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:text="0%"-->
+            <!--android:textColor="@color/menu_main_gray_light"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold" />-->
 
-                <com.usemenu.MenuAndroidApplication.views.MenuTextView
-                    android:id="@+id/textViewMaxTip"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="15dp"
-                    android:text="25%"
-                    android:textColor="@color/menu_main_gray_light"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
+            <!--<com.usemenu.MenuAndroidApplication.views.MenuTextView-->
+            <!--android:id="@+id/textViewMaxTip"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:text="25%"-->
+            <!--android:textColor="@color/menu_main_gray_light"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</RelativeLayout>-->
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_margin="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+
             android:gravity="bottom"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <com.usemenu.MenuAndroidApplication.views.MenuTextView
                     android:layout_width="wrap_content"
@@ -164,7 +215,7 @@
                     android:id="@+id/layoutDiscount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <com.usemenu.MenuAndroidApplication.views.MenuTextView
                         android:layout_width="wrap_content"
@@ -186,7 +237,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <com.usemenu.MenuAndroidApplication.views.MenuTextView
                         android:layout_width="wrap_content"
@@ -208,7 +259,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <com.usemenu.MenuAndroidApplication.views.MenuTextView
                         android:layout_width="wrap_content"
@@ -234,7 +285,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
                 android:gravity="right"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <com.usemenu.MenuAndroidApplication.views.MenuTextView
                     android:id="@+id/textViewSubtotal"
@@ -274,7 +325,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:paddingLeft="10dp" >
+                android:paddingLeft="10dp">
 
                 <com.usemenu.MenuAndroidApplication.views.MenuTextView
                     android:id="@+id/textViewTotalLabel"

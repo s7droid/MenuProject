@@ -1,8 +1,5 @@
 package com.usemenu.MenuAndroidApplication.activities;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,191 +23,197 @@ import com.usemenu.MenuAndroidApplication.volley.requests.SendReceiptByEmailRequ
 import com.usemenu.MenuAndroidApplication.volley.responses.GetReceiptsResponse;
 import com.usemenu.MenuAndroidApplication.volley.responses.SendReceiptByEmailResponse;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.usemenu.MenuAndroidApplication.app.Constants.*;
+
+
 public class ReceiptListActivity extends BaseActivity {
 
-	// VIEWS
-	private ListView mListViewReceipts;
+    // VIEWS
+    private ListView mListViewReceipts;
 
-	// DATA
-	public static final String RECEIPT_LIST_ITEM_SELECTED = "receipt_selected";
+    // DATA
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_receipt_list);
 
-		initActionBar();
-		initViews();
-		initData();
-	}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_receipt_list);
 
-	private void initActionBar() {
+        initActionBar();
+        initViews();
+        initData();
+    }
 
-		setActionBarForwardArrowVisibility(null);
-		setActionBarForwardButtonText(getString(R.string.main_menu_view_past_receipts));
-		setActionBarForwardButtonTextColor(getResources().getColor(R.color.menu_main_orange));
-		setActionBarMenuButtonVisibility(View.GONE);
+    private void initActionBar() {
 
-		setActionBarForwardButtonOnClickListener(new OnClickListener() {
+        setActionBarForwardArrowVisibility(null);
+        setActionBarForwardButtonText(getString(R.string.main_menu_view_past_receipts));
+        setActionBarForwardButtonTextColor(getResources().getColor(R.color.menu_main_orange));
+        setActionBarMenuButtonVisibility(View.GONE);
 
-			@Override
-			public void onClick(View v) {
+        setActionBarForwardButtonOnClickListener(new OnClickListener() {
 
-			}
-		});
+            @Override
+            public void onClick(View v) {
 
-		setActionBarBackButtonOnClickListener(new OnClickListener() {
+            }
+        });
 
-			@Override
-			public void onClick(View v) {
-				finish();
-			}
-		});
+        setActionBarBackButtonOnClickListener(new OnClickListener() {
 
-	}
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
-	private void initViews() {
-		mListViewReceipts = (ListView) findViewById(R.id.listviewReceiptListActivityList);
-	}
+    }
 
-	private void initData() {
+    private void initViews() {
+        mListViewReceipts = (ListView) findViewById(R.id.listviewReceiptListActivityList);
+    }
 
-		showProgressDialogLoading();
+    private void initData() {
 
-		Map<String, String> params = new HashMap<String, String>();
-		params.put("accesstoken", Settings.getAccessToken(ReceiptListActivity.this));
+        showProgressDialogLoading();
 
-		GetReceiptsRequest request = new GetReceiptsRequest(ReceiptListActivity.this, params, new Listener<GetReceiptsResponse>() {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("accesstoken", Settings.getAccessToken(ReceiptListActivity.this));
 
-			@Override
-			public void onResponse(GetReceiptsResponse arg0) {
-				dismissProgressDialog();
+        GetReceiptsRequest request = new GetReceiptsRequest(ReceiptListActivity.this, params, new Listener<GetReceiptsResponse>() {
 
-				if (arg0 != null && arg0.receipts != null && arg0.receipts.length > 0) {
-					mListViewReceipts.setAdapter(new ReceiptListAdapter(arg0));
-				} else {
-					showAlertDialog("", getResources().getString(R.string.receipt_list_empty_body), new OnClickListener() {
+            @Override
+            public void onResponse(GetReceiptsResponse arg0) {
+                dismissProgressDialog();
 
-						@Override
-						public void onClick(View v) {
-							finish();
-						}
-					});
-				}
-			}
-		});
+                if (arg0 != null && arg0.receipts != null && arg0.receipts.length > 0) {
+                    mListViewReceipts.setAdapter(new ReceiptListAdapter(arg0));
+                } else {
+                    showAlertDialog("", getResources().getString(R.string.receipt_list_empty_body), new OnClickListener() {
 
-		VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
+                        @Override
+                        public void onClick(View v) {
+                            finish();
+                        }
+                    });
+                }
+            }
+        });
 
-	}
+        VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
 
-	class ReceiptListAdapter extends BaseAdapter {
+    }
 
-		private GetReceiptsResponse items;
+    class ReceiptListAdapter extends BaseAdapter {
 
-		public ReceiptListAdapter(GetReceiptsResponse receipts) {
-			items = receipts;
-		}
+        private GetReceiptsResponse items;
 
-		@Override
-		public int getCount() {
-			return items.receipts.length;
-		}
+        public ReceiptListAdapter(GetReceiptsResponse receipts) {
+            items = receipts;
+        }
 
-		@Override
-		public Receipt getItem(int position) {
-			return items.receipts[position];
-		}
+        @Override
+        public int getCount() {
+            return items.receipts.length;
+        }
 
-		@Override
-		public long getItemId(int position) {
-			return 0;
-		}
+        @Override
+        public Receipt getItem(int position) {
+            return items.receipts[position];
+        }
 
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
 
-			if (convertView == null) {
-				ViewHolder holder = new ViewHolder();
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
 
-				convertView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.column_receipt_list_item, null);
+            if (convertView == null) {
+                ViewHolder holder = new ViewHolder();
 
-				holder.date = (TextView) convertView.findViewById(R.id.textviewReceiptListItemDate);
-				holder.price = (TextView) convertView.findViewById(R.id.textviewReceiptListItemPrice);
-				holder.restaurantName = (TextView) convertView.findViewById(R.id.textviewReceiptListItemRestaurantName);
-				holder.sendEmail = (Button) convertView.findViewById(R.id.buttonReceiptListItemSendMessage);
-				holder.container = (RelativeLayout) convertView.findViewById(R.id.relativelayoutReceiptListItemContainer);
+                convertView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.column_receipt_list_item, null);
 
-				convertView.setTag(holder);
-			}
+                holder.date = (TextView) convertView.findViewById(R.id.textviewReceiptListItemDate);
+                holder.price = (TextView) convertView.findViewById(R.id.textviewReceiptListItemPrice);
+                holder.restaurantName = (TextView) convertView.findViewById(R.id.textviewReceiptListItemRestaurantName);
+                holder.sendEmail = (Button) convertView.findViewById(R.id.buttonReceiptListItemSendMessage);
+                holder.container = (RelativeLayout) convertView.findViewById(R.id.relativelayoutReceiptListItemContainer);
 
-			ViewHolder holder = (ViewHolder) convertView.getTag();
-			final Receipt item = getItem(position);
+                convertView.setTag(holder);
+            }
 
-			holder.sendEmail.setText(getString(R.string.receipt_send_to_email));
-			holder.sendEmail.setEnabled(true);
+            ViewHolder holder = (ViewHolder) convertView.getTag();
+            final Receipt item = getItem(position);
 
-			holder.date.setText(item.date);
-			holder.price.setText(item.currency + item.amount);
-			holder.restaurantName.setText(item.restaurantname);
+            holder.sendEmail.setText(getString(R.string.receipt_send_to_email));
+            holder.sendEmail.setEnabled(true);
 
-			holder.sendEmail.setTag(holder);
+            holder.date.setText(item.date);
+            holder.price.setText(item.currency + item.amount);
+            holder.restaurantName.setText(item.restaurantname);
 
-			holder.sendEmail.setOnClickListener(new OnClickListener() {
+            holder.sendEmail.setTag(holder);
 
-				@Override
-				public void onClick(View v) {
-					Map<String, String> params = new HashMap<String, String>();
-					params.put("receiptid", String.valueOf(item.receiptid));
-					params.put("accesstoken", Settings.getAccessToken(getApplicationContext()));
+            holder.sendEmail.setOnClickListener(new OnClickListener() {
 
-					final ViewHolder holder = (ViewHolder) v.getTag();
+                @Override
+                public void onClick(View v) {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("receiptid", String.valueOf(item.receiptid));
+                    params.put("accesstoken", Settings.getAccessToken(getApplicationContext()));
 
-					showProgressDialogLoading();
+                    final ViewHolder holder = (ViewHolder) v.getTag();
 
-					SendReceiptByEmailRequest request = new SendReceiptByEmailRequest(ReceiptListActivity.this, params,
-							new Response.Listener<SendReceiptByEmailResponse>() {
+                    showProgressDialogLoading();
 
-								@Override
-								public void onResponse(SendReceiptByEmailResponse response) {
-									dismissProgressDialog();
+                    SendReceiptByEmailRequest request = new SendReceiptByEmailRequest(ReceiptListActivity.this, params,
+                            new Response.Listener<SendReceiptByEmailResponse>() {
 
-									if (response.response != null && response.response.equals("success")) {
-										holder.sendEmail.setText(getString(R.string.receipt_send_email_button_sent));
-										holder.sendEmail.setEnabled(false);
-										holder.isSent = true;
-									} else
-										showAlertDialog("", getResources().getString(R.string.dialog_send_receipt_to_email_error));
-								}
+                                @Override
+                                public void onResponse(SendReceiptByEmailResponse response) {
+                                    dismissProgressDialog();
 
-							});
+                                    if (response.response != null && response.response.equals("success")) {
+                                        holder.sendEmail.setText(getString(R.string.receipt_send_email_button_sent));
+                                        holder.sendEmail.setEnabled(false);
+                                        holder.isSent = true;
+                                    } else
+                                        showAlertDialog("", getResources().getString(R.string.dialog_send_receipt_to_email_error));
+                                }
 
-					VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
-				}
-			});
+                            });
 
-			holder.container.setOnClickListener(new OnClickListener() {
+                    VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
+                }
+            });
 
-				@Override
-				public void onClick(View v) {
-					Intent intent = new Intent(getApplicationContext(), ReceiptDetailsActivity.class);
-					intent.putExtra(RECEIPT_LIST_ITEM_SELECTED, item);
-					startActivity(intent);
-				}
-			});
+            holder.container.setOnClickListener(new OnClickListener() {
 
-			return convertView;
-		}
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), ReceiptDetailsActivity.class);
+                    intent.putExtra(RECEIPT_LIST_ITEM_SELECTED, item);
+                    startActivity(intent);
+                }
+            });
 
-		class ViewHolder {
-			TextView date;
-			TextView price;
-			TextView restaurantName;
-			Button sendEmail;
-			RelativeLayout container;
-			boolean isSent = false;
-		}
+            return convertView;
+        }
 
-	}
+        class ViewHolder {
+            TextView date;
+            TextView price;
+            TextView restaurantName;
+            Button sendEmail;
+            RelativeLayout container;
+            boolean isSent = false;
+        }
+
+    }
 
 }
