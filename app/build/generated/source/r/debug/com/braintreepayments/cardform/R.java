@@ -20,28 +20,28 @@ public final class R {
 		public static final int bt_landscape_max_width = 0x7f07000a;
 	}
 	public static final class drawable {
-		public static final int bt_amex = 0x7f02000b;
-		public static final int bt_card_highlighted = 0x7f02000d;
-		public static final int bt_cid_highlighted = 0x7f02000e;
-		public static final int bt_cvv_highlighted = 0x7f02000f;
-		public static final int bt_diners = 0x7f020010;
-		public static final int bt_discover = 0x7f020011;
-		public static final int bt_jcb = 0x7f020013;
-		public static final int bt_maestro = 0x7f020019;
-		public static final int bt_mastercard = 0x7f02001a;
-		public static final int bt_visa = 0x7f020022;
+		public static final int bt_amex = 0x7f02000c;
+		public static final int bt_card_highlighted = 0x7f02000e;
+		public static final int bt_cid_highlighted = 0x7f02000f;
+		public static final int bt_cvv_highlighted = 0x7f020010;
+		public static final int bt_diners = 0x7f020011;
+		public static final int bt_discover = 0x7f020012;
+		public static final int bt_jcb = 0x7f020014;
+		public static final int bt_maestro = 0x7f02001a;
+		public static final int bt_mastercard = 0x7f02001b;
+		public static final int bt_visa = 0x7f020023;
 	}
 	public static final class id {
-		public static final int bt_card_form_card_number = 0x7f0a0093;
-		public static final int bt_card_form_cvv = 0x7f0a0095;
-		public static final int bt_card_form_expiration = 0x7f0a0094;
-		public static final int bt_card_form_postal_code = 0x7f0a0096;
+		public static final int bt_card_form_card_number = 0x7f0a0096;
+		public static final int bt_card_form_cvv = 0x7f0a0098;
+		public static final int bt_card_form_expiration = 0x7f0a0097;
+		public static final int bt_card_form_postal_code = 0x7f0a0099;
 	}
 	public static final class integer {
 		public static final int bt_match_parent = 0x7f090000;
 	}
 	public static final class layout {
-		public static final int bt_card_form_fields = 0x7f030014;
+		public static final int bt_card_form_fields = 0x7f030016;
 	}
 	public static final class string {
 		public static final int bt_default_action_label = 0x7f050006;

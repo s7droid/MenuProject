@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.s7design.menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <com.usemenu.MenuAndroidApplication.views.MenuTextView
             android:id="@+id/textviewRestaurantPreviewActivityWelcomeMessage"
@@ -70,4 +69,4 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-</LinearLayout><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/layout/activity_restaurant_preview.xml -->
+</LinearLayout><!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/layout/activity_restaurant_preview.xml -->

@@ -7,4 +7,4 @@
     android:pivotY="50%"
     android:fromDegrees="0"
     android:toDegrees="360" />
-<!-- From: file:/Users/lkorth/bt/braintree-android/Drop-In/src/main/res/drawable/bt_loading_animation.xml --><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/drawable/bt_loading_animation.xml -->
+<!-- From: file:/Users/lkorth/bt/braintree-android/Drop-In/src/main/res/drawable/bt_loading_animation.xml --><!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/drawable/bt_loading_animation.xml -->

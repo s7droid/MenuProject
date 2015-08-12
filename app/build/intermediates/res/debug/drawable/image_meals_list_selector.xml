@@ -4,4 +4,4 @@
     <item android:drawable="@drawable/image_meals_list_shape_selected" android:state_pressed="true"/>
     <item android:drawable="@drawable/image_meals_list_shape_selected" android:state_selected="true"/>
 
-</selector><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/drawable/image_meals_list_selector.xml -->
+</selector><!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/drawable/image_meals_list_selector.xml -->

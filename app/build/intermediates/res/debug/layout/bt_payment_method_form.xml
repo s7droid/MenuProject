@@ -72,4 +72,4 @@
     <include layout="@layout/bt_form_submit_button" />
 
 </RelativeLayout>
-<!-- From: file:/Users/lkorth/bt/braintree-android/Drop-In/src/main/res/layout/bt_payment_method_form.xml --><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/layout/bt_payment_method_form.xml -->
+<!-- From: file:/Users/lkorth/bt/braintree-android/Drop-In/src/main/res/layout/bt_payment_method_form.xml --><!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/layout/bt_payment_method_form.xml -->

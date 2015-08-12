@@ -55,4 +55,4 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/bt_very_light_gray" />
-</LinearLayout><!-- From: file:/Users/lkorth/bt/braintree-android/Drop-In/src/main/res/layout/bt_payment_description.xml --><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/layout/bt_payment_description.xml -->
+</LinearLayout><!-- From: file:/Users/lkorth/bt/braintree-android/Drop-In/src/main/res/layout/bt_payment_description.xml --><!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/layout/bt_payment_description.xml -->

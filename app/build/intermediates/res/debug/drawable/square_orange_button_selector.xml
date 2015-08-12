@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/square_orange_button_shape" android:state_pressed="true"/>
     <item android:drawable="@drawable/square_orange_button_shape" android:state_pressed="false"/>
 
-</selector><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/drawable/square_orange_button_selector.xml -->
+</selector><!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/drawable/square_orange_button_selector.xml -->

@@ -5,4 +5,4 @@
     <item android:state_pressed="false" android:drawable="@drawable/rounded_gray_button_shape"/>
 
 </selector>
-<!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/drawable/rounded_gray_button_selector.xml -->
+<!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/drawable/rounded_gray_button_selector.xml -->

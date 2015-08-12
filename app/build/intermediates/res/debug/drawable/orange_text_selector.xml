@@ -4,4 +4,4 @@
     <item android:color="@android:color/white" android:state_pressed="true"/>
     <item android:color="@color/menu_main_orange" android:state_pressed="false"/>
 
-</selector><!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/drawable/orange_text_selector.xml -->
+</selector><!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/drawable/orange_text_selector.xml -->

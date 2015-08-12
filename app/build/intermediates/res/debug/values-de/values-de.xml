@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values-de/strings.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values-de/strings.xml -->
     <eat-comment/>
     <string name="about_menu_aknoledgements">Bestätigungen</string>
     <string name="about_menu_aknowledgements_text1">Lorem ipsum dolor sit amet, no bonorum commune electram est, vidisse veritus sit at. Per ad dicat salutatus. Ei diam fugit causae sit. Ne tollit invenire usu, at duis pertinacia consetetur nam. Viderer volutpat duo ei, at duo omnis ornatus qualisque.</string>
@@ -24,7 +24,7 @@
     <string name="action_bar_sign_in">ANMELDEN</string>
     <string name="action_bar_sign_up">REGISTRIEREN</string>
     <string name="action_bar_tutorial">ANLEITUNG</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values-de/values-de.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values-de/values-de.xml -->
     <eat-comment/>
     <string name="bt_add_new_payment_method">Neue Zahlungsmethode hinzufügen</string>
     <string name="bt_add_payment_method">Zahlungsquelle hinzufügen</string>
@@ -32,10 +32,10 @@
     <string name="bt_change_payment_method">Zahlungsmethode ändern</string>
     <string name="bt_choose_payment_method">Zahlungsquelle wählen</string>
     <string name="bt_default_action_bar_text">Einkaufen</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values-de/values-de.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values-de/values-de.xml -->
     <eat-comment/>
     <string name="bt_default_action_label">Einkaufen</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values-de/values-de.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values-de/values-de.xml -->
     <eat-comment/>
     <string name="bt_default_submit_button_text">EINKAUFEN</string>
     <string name="bt_descriptor_amex">AMEX</string>
@@ -47,19 +47,19 @@
     <string name="bt_descriptor_paypal">PayPal</string>
     <string name="bt_descriptor_unknown">Kreditkarte</string>
     <string name="bt_descriptor_visa">Visa</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values-de/values-de.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values-de/values-de.xml -->
     <eat-comment/>
     <string name="bt_form_hint_card_number">Kartennummer</string>
     <string name="bt_form_hint_cvv">Kartenprüfnr.</string>
     <string name="bt_form_hint_expiration">Gültig bis</string>
     <string name="bt_form_hint_postal_code">PLZ</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values-de/values-de.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values-de/values-de.xml -->
     <eat-comment/>
     <string name="bt_form_pay_with_card_header">Mit Kreditkarte bezahlen</string>
     <string name="bt_invalid_card">Kreditkartendaten sind ungültig.</string>
     <string name="bt_pay_with_paypal">Mit PayPal zahlen</string>
     <string name="bt_pay_with_venmo">Zahlen Sie mit Venmo</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values-de/strings.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values-de/strings.xml -->
     <eat-comment/>
     <string name="category_meals_add">ADD</string>
     <string name="category_meals_add_large">ADD LARGE</string>
@@ -76,7 +76,7 @@
     <string name="checkout_tax">MWST</string>
     <string name="checkout_thank_you_for_order">Vielen Dank für Deine Bestellung!</string>
     <string name="checkout_tip">TIP</string>
-    <string name="checkout_tip_col">TIP:</string>
+    <string name="checkout_tip_col">Tip</string>
     <string name="checkout_total">TOTAL</string>
     <string name="dialog_account_lockedout_content">Aus Sicherheitsgründen haben wir Login Versuche auf dein Konto deaktiviert. Bitte versuche es in 5 Minuten erneut oder setze dein Passwort zurück falls Du es vergessen haben solltest.</string>
     <string name="dialog_account_lockedout_title">Oops!</string>

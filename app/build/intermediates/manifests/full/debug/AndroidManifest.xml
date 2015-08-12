@@ -44,8 +44,7 @@
         </activity>
         <activity
             android:name="com.usemenu.MenuAndroidApplication.activities.RestaurantPreviewActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.usemenu.MenuAndroidApplication.activities.TutorialFirstActivity"
             android:screenOrientation="portrait" />
@@ -96,6 +95,16 @@
         <activity
             android:name="com.usemenu.MenuAndroidApplication.activities.TokenizationExplainedActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.usemenu.MenuAndroidApplication.activities.TutorialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.usemenu.MenuAndroidApplication.activities.CategoryMealsActivityNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.usemenu.MenuAndroidApplication.activities.MealSubCategoriesActivity"
+            android:screenOrientation="portrait" />
+
         <!-- Activities from card.io library -->
         <activity
             android:name="io.card.payment.CardIOActivity"

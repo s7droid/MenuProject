@@ -2,21 +2,25 @@ package com.usemenu.MenuAndroidApplication.views;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.google.gson.Gson;
 import com.usemenu.MenuAndroidApplication.R;
+import com.usemenu.MenuAndroidApplication.activities.MealSubCategoriesActivity;
+import com.usemenu.MenuAndroidApplication.app.Constants;
 import com.usemenu.MenuAndroidApplication.dataclasses.Category;
 import com.usemenu.MenuAndroidApplication.dataclasses.Item;
 import com.usemenu.MenuAndroidApplication.utils.Utils;
 import com.usemenu.MenuAndroidApplication.volley.VolleySingleton;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -137,8 +141,21 @@ public class CategoryMealItemView extends LinearLayout implements View.OnClickLi
             for (Item item : allItems) {
                 it.concat("\n" + item.name);
             }
+/*
             Toast.makeText(getContext(), "SubCategory list size= " + subCategoryItems.size() + "\n All items list size= " + allItems.size(), Toast.LENGTH_SHORT).show();
+*/
+            Intent intent = new Intent(context, MealSubCategoriesActivity.class);
+            intent.putExtra(Constants.KEY_ITEMS, new Gson().toJson(new BundleItem((ArrayList < Item >) allItems)));
+            context.startActivity(intent);
+        }
+    }
 
+    public class BundleItem implements Serializable {
+
+        public ArrayList<Item> items;
+
+        public BundleItem(ArrayList<Item> items) {
+            this.items = items;
         }
     }
 }
