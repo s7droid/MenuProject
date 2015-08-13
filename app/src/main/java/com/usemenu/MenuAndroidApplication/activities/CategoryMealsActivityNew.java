@@ -45,7 +45,7 @@ public class CategoryMealsActivityNew extends BaseActivity {
     private LinearLayout categoriesContainer;
     // DATA
     private ArrayList<Category> categories;
-    private ArrayList<Item> items;
+    private ArrayList<List<Item>> items;
     private int width = 0;
 
     @Override
@@ -95,15 +95,25 @@ public class CategoryMealsActivityNew extends BaseActivity {
      */
     private void initViews() {
         categoriesContainer = (LinearLayout) findViewById(R.id.categoriesContainer);
+        List<Item> reorderedList = new ArrayList<Item>();
+
+        for (int i = 0; i < categories.size(); ++i) {
+            for (List<Item> it : items) {
+                if (categories.get(i).name.equals(it.get(0).category)) {
+                    reorderedList.addAll(it);
+                }
+            }
+        }
+
         for (Category category : categories) {
             List<Item> categoryItems = new ArrayList<Item>();
 
-            for (Item item : CategoryMealsActivityNew.this.items) {
+            for (Item item : reorderedList) {
                 if (category.name.equalsIgnoreCase(item.category) && item.image.equalsIgnoreCase("subcat"))
                     categoryItems.add(item);
             }
 
-            CategoryMealItemView v = new CategoryMealItemView(this, category, categoryItems,CategoryMealsActivityNew.this.items,categories);
+            CategoryMealItemView v = new CategoryMealItemView(this, category, categoryItems, reorderedList, categories);
             categoriesContainer.addView(v);
         }
 
@@ -154,9 +164,11 @@ public class CategoryMealsActivityNew extends BaseActivity {
                             if (items.errordata != null && items.errordata.equals("none")) {
                                 Log.e("onResponse", "response of meal sub item");
                                 if (CategoryMealsActivityNew.this.items == null)
-                                    CategoryMealsActivityNew.this.items = new ArrayList<Item>();
-                                if (items != null && items.items != null)
-                                    CategoryMealsActivityNew.this.items.addAll(new ArrayList<Item>(Arrays.asList(items.items)));
+                                    CategoryMealsActivityNew.this.items = new ArrayList<List<Item>>();
+                                if (items != null && items.items != null) {
+                                    List<Item> item = Arrays.asList(items.items);
+                                    CategoryMealsActivityNew.this.items.add(item);
+                                }
                                 countDownLatch.countDown();
                                 isLetched = true;
                             }

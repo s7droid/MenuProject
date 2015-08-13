@@ -39,6 +39,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
+        android:descendantFocusability="blocksDescendants"
         android:layout_toLeftOf="@+id/networkImageViewMealImage">
 
         <com.usemenu.MenuAndroidApplication.views.MenuTextView
@@ -74,11 +75,13 @@
             android:layout_height="25dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:background="@drawable/shape_rounded_square_orange_unselected"
+            android:background="@drawable/selector_square_rounded_orange"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:gravity="center"
             android:includeFontPadding="false"
             android:text="+ ADD"
-            android:textColor="@color/menu_main_orange"
+            android:textColor="@drawable/orange_text_selector"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -89,11 +92,14 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/textviewAdd"
-            android:background="@drawable/shape_rounded_square_orange_unselected"
+            android:background="@drawable/selector_square_rounded_gray"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:gravity="center"
             android:includeFontPadding="false"
             android:text="DETAILS"
-            android:textColor="@color/menu_main_gray_light"
+            android:textColor="@drawable/selector_text_light_gray"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -119,8 +125,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@color/menu_main_divider_color"
-        android:visibility="gone"/>
-
+        android:visibility="gone" />
 
     <View
         android:id="@+id/separatorTop"
@@ -130,6 +135,6 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@color/menu_main_divider_color"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 </RelativeLayout>

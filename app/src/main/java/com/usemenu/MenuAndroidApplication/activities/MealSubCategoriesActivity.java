@@ -103,6 +103,7 @@ public class MealSubCategoriesActivity extends BaseActivity {
 
             content.setDivider(null);
             content.setDividerHeight(0);
+            content.setEnabled(false);
             content.setSelector(android.R.color.transparent);
             content.setBackgroundColor(getResources().getColor(android.R.color.white));
             content.setAdapter(new MealsListAdapter(context, subCategoryItems.get(position)));
@@ -207,7 +208,6 @@ public class MealSubCategoriesActivity extends BaseActivity {
             holder.name.setText(item.name);
 
             holder.price.setText(item.currency + " " + item.largeprice + " / " + item.smallprice);
-
             return convertView;
         }
 
