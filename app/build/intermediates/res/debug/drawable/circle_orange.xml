@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <size
+        android:width="10dp"
+        android:height="10dp" />
+
+    <corners android:radius="10dp" />
+
+    <solid android:color="@color/menu_main_orange" />
+
+</shape><!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/drawable/circle_orange.xml -->

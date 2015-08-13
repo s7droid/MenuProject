@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_rounded_square_gray_selected" android:state_focused="true" />
+    <item android:drawable="@drawable/shape_rounded_square_gray_unselected" android:state_focused="false" />
+
+</selector><!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/drawable/selector_square_rounded_gray.xml -->

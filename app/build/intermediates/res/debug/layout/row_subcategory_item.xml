@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menu_background_gray"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/separator_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:rotation="180">
+
+            <include
+                layout="@layout/separator_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_toLeftOf="@+id/networkImageViewMealImage">
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textviewMealName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Argentinian Stake"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textviewMealPrices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textviewAdd"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textviewMealName"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="CHF 17 / 12"
+            android:textColor="@color/menu_main_gray"
+            android:textSize="12sp" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textviewAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_square_rounded_orange"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="+ ADD"
+            android:textColor="@drawable/orange_text_selector"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.usemenu.MenuAndroidApplication.views.MenuTextView
+            android:id="@+id/textviewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/textviewAdd"
+            android:background="@drawable/selector_square_rounded_gray"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="DETAILS"
+            android:textColor="@drawable/selector_text_light_gray"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/networkImageViewMealImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/no_image"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/separatorBottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/menu_main_divider_color"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/separatorTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/menu_main_divider_color"
+        android:visibility="gone" />
+
+</RelativeLayout><!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/layout/row_subcategory_item.xml -->
