@@ -70,8 +70,6 @@ MERGED from com.braintreepayments:card-form:2.0.1:8:5
 MERGED from io.card:android-sdk:5.0.1:7:5
 MERGED from com.android.support:appcompat-v7:22.0.0:20:5
 MERGED from com.android.support:support-v4:22.2.1:20:5
-MERGED from MenuProject:CreditCardEntry:unspecified:6:5
-MERGED from com.android.support:support-v4:22.2.1:20:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:23:9
 		INJECTED from AndroidManifest.xml:0:0
@@ -87,7 +85,6 @@ MERGED from org.altbeacon:android-beacon-library:2.5.1:15:5
 MERGED from com.braintreepayments.api:braintree:1.6.5:15:5
 MERGED from io.card:android-sdk:5.0.1:21:5
 MERGED from com.android.support:appcompat-v7:22.0.0:22:5
-MERGED from com.android.support:support-v4:22.2.1:22:5
 MERGED from com.android.support:support-v4:22.2.1:22:5
 	android:supportsRtl
 		ADDED from com.braintreepayments.api:braintree:1.6.5:16:9

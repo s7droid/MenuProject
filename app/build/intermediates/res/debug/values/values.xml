@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -28,22 +28,22 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <color name="bt_base_background">#F3F4F6</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="bt_black">#001129</color>
     <color name="bt_blue">#009BDE</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <color name="bt_blue_pressed">#008BC7</color>
     <color name="bt_border_color">#99999A</color>
     <color name="bt_button_disabled_color">#99999A</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="bt_light_gray">#6d6d6d</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <color name="bt_paypal_button_background">#009BDE</color>
     <color name="bt_paypal_button_background_pressed">#0C8DC4</color>
@@ -51,7 +51,7 @@
     <color name="bt_very_light_gray">#E2E2E3</color>
     <color name="bt_white">#FFFFFF</color>
     <color name="bt_white_pressed">#F2F2F2</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
@@ -70,15 +70,16 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <color name="menu_background_gray">#f6f6f6</color>
     <color name="menu_main_divider_color">#ffcccccc</color>
     <color name="menu_main_gray">#ff666666</color>
     <color name="menu_main_gray_dark">#ff333333</color>
     <color name="menu_main_gray_light">#ff999999</color>
     <color name="menu_main_orange">#ff6600 </color>
     <color name="menu_main_orange_dark">#ffe35b00 </color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
@@ -96,10 +97,7 @@
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/MenuProject/CreditCardEntry/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <color name="text_helper_color">#a8a8a8</color>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="white">#ffffffff</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
@@ -109,7 +107,6 @@
     <declare-styleable name="ActionMode"><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr name="background"/><attr name="backgroundSplit"/><attr name="height"/><attr format="reference" name="closeItemLayout"/></declare-styleable>
     <declare-styleable name="ActivityChooserView"><attr format="string" name="initialActivityCount"/><attr format="reference" name="expandActivityOverflowButtonDrawable"/></declare-styleable>
     <declare-styleable name="CompatTextView"><attr format="reference|boolean" name="textAllCaps"/></declare-styleable>
-    <declare-styleable name="CreditCardForm"><attr format="boolean" name="include_exp"/><attr format="boolean" name="include_security"/><attr format="boolean" name="include_zip"/><attr format="boolean" name="include_helper"/><attr format="color" name="helper_text_color"/><attr format="color" name="text_color"/><attr format="color" name="hint_text_color"/><attr format="color" name="cursor_color"/><attr format="string" name="card_number_hint"/><attr format="reference" name="input_background"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="topBottomBarArrowSize"/><attr format="dimension" name="middleBarArrowSize"/><attr format="dimension" name="barSize"/><attr format="dimension" name="thickness"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
@@ -129,7 +126,7 @@
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
     <declare-styleable name="text_font"><attr format="boolean" name="isBookFont"/></declare-styleable>
     <declare-styleable name="text_shadow"><attr format="boolean" name="useShadow"/></declare-styleable>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
@@ -173,33 +170,33 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <dimen name="bt_default_item_height">50dp</dimen>
     <dimen name="bt_default_small_text_size">11sp</dimen>
     <dimen name="bt_default_text_size">16sp</dimen>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="bt_floating_edit_text_horizontal_offset">12dp</dimen>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <dimen name="bt_form_appswitch_button_size">40dp</dimen>
     <dimen name="bt_form_field_padding">12dp</dimen>
     <dimen name="bt_form_padding">16dp</dimen>
     <dimen name="bt_full_width" ns1:ignore="ReferenceType">@integer/bt_match_parent</dimen>
     <dimen name="bt_header_container_height">66dp</dimen>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="bt_input_text_size">16sp</dimen>
     <dimen name="bt_landscape_max_width">500dp</dimen>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <dimen name="bt_payment_method_button_divider_height">30dp</dimen>
     <dimen name="bt_payment_method_button_divider_width">1dp</dimen>
     <dimen name="bt_payment_method_button_height">50dp</dimen>
     <dimen name="bt_payment_method_button_type_padding">16dp</dimen>
     <dimen name="bt_payment_method_item_padding">8dp</dimen>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -211,40 +208,18 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/MenuProject/CreditCardEntry/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <item name="cc_card" type="id">2222</item>
-    <item name="cc_ccv" type="id">4444</item>
-    <item name="cc_entry" type="id">1000</item>
-    <item name="cc_entry_internal" type="id">3000</item>
-    <item name="cc_exp" type="id">3333</item>
-    <item name="cc_form_layout" type="id">1111</item>
-    <item name="cc_zip" type="id">5555</item>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
-    <eat-comment/>
     <item name="home" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/MenuProject/CreditCardEntry/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <item name="text_helper" type="id">2000</item>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
-    <eat-comment/>
     <item name="up" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <integer name="bt_match_parent">-1</integer>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/MenuProject/CreditCardEntry/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <string name="CreditCardNumberHelp"/>
-    <string name="ExpirationDateHelp">Expiration date (MM/DD)</string>
-    <string name="SecurityCodeHelp">Security code (CVV)</string>
-    <string name="ZipHelp">Zip code of billing address</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -262,7 +237,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="about_menu_aknoledgements">Acknowledgements</string>
     <string name="about_menu_aknowledgements_text1">Lorem ipsum dolor sit amet, no bonorum commune electram est, vidisse veritus sit at. Per ad dicat salutatus. Ei diam fugit causae sit. Ne tollit invenire usu, at duis pertinacia consetetur nam. Viderer volutpat duo ei, at duo omnis ornatus qualisque.</string>
@@ -287,7 +262,7 @@
     <string name="action_bar_sign_up">SIGN UP</string>
     <string name="action_bar_tutorial">TUTORIAL</string>
     <string name="app_name">Menu</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <string name="bt_add_new_payment_method">Add New Payment Method</string>
     <string name="bt_add_payment_method">Add Payment Method</string>
@@ -295,10 +270,10 @@
     <string name="bt_change_payment_method">Change Payment Method</string>
     <string name="bt_choose_payment_method">Choose Payment Method</string>
     <string name="bt_default_action_bar_text">Purchase</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="bt_default_action_label">Purchase</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <string name="bt_default_submit_button_text">PURCHASE</string>
     <string name="bt_descriptor_amex">Amex</string>
@@ -311,20 +286,20 @@
     <string name="bt_descriptor_paypal">PayPal</string>
     <string name="bt_descriptor_unknown">Card</string>
     <string name="bt_descriptor_visa">Visa</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="bt_form_hint_card_number">Card Number</string>
     <string name="bt_form_hint_cvv">CVV</string>
     <string name="bt_form_hint_expiration">Expiration</string>
     <string name="bt_form_hint_postal_code">Postal Code</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <string name="bt_form_pay_with_card_header">Pay With a Card</string>
     <string name="bt_invalid_card">Card information is invalid</string>
     <string name="bt_pay_with_android_pay" ns1:ignore="MissingTranslation">Pay with Google Wallet</string>
     <string name="bt_pay_with_paypal">Pay with PayPal</string>
     <string name="bt_pay_with_venmo">Pay with Venmo</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="category_meals_add">ADD</string>
     <string name="category_meals_add_large">ADD LARGE</string>
@@ -341,7 +316,7 @@
     <string name="checkout_tax">VAT</string>
     <string name="checkout_thank_you_for_order">Thank you for your order!</string>
     <string name="checkout_tip">TIP</string>
-    <string name="checkout_tip_col">TIP:</string>
+    <string name="checkout_tip_col">Tip</string>
     <string name="checkout_total">TOTAL</string>
     <string name="dialog_account_lockedout_content">For security reasons, logins to your account were blocked. Please try again in 5 minutes or reset your password if you forgot it.</string>
     <string name="dialog_account_lockedout_title">Oops!</string>
@@ -354,6 +329,7 @@
     <string name="dialog_card_declined">Your credit card was declined… Please try again</string>
     <string name="dialog_check_inbox_content">Check your Email Inbox for a reset link</string>
     <string name="dialog_check_inbox_title">Check your Email!</string>
+    <string name="dialog_confirm_your_order">CONFIRM YOUR ORDER</string>
     <string name="dialog_credit_card_number_empty_content">Please enter your credit card number and try again</string>
     <string name="dialog_credit_card_number_empty_title">Empty Credit Card Number</string>
     <string name="dialog_cvv_empty_content">Please enter your credit card CVV and try again</string>
@@ -388,6 +364,7 @@
     <string name="dialog_repeat_password_empty_content">Please repeat your password and try again</string>
     <string name="dialog_repeat_password_empty_title">Empty Repeat Password</string>
     <string name="dialog_send_receipt_to_email_error">Something went wrong… You can try to resend your receipt from the main menu under View Past Receipts.</string>
+    <string name="dialog_serve_all_courses_at_once">Serve all courses at once?</string>
     <string name="dialog_title_error">Error</string>
     <string name="dialog_title_success">Success</string>
     <string name="dialog_title_warning">Warning</string>
@@ -423,6 +400,7 @@
     <string name="misc_is_small">(S)</string>
     <string name="misc_splash">Welcome to MENU</string>
     <string name="misc_table">Table</string>
+    <string name="no">NO</string>
     <string name="pickup_info_add_phone">Please, enter Your country code and phone number.</string>
     <string name="pickup_info_confirm">CONFIRM</string>
     <string name="pickup_info_country_code">Country code:</string>
@@ -477,13 +455,20 @@
     <string name="tokenization_explanation_subtitle">Here\'s what happens with your credit card when using MENU:</string>
     <string name="tokenization_explanation_third_step">3. These newly created \'tokens\' are stored in the cloud for safe future payments with MENU.</string>
     <string name="tokenization_explanation_title">We care about your security.</string>
+    <string name="tutorial_continue">Continue</string>
+    <string name="tutorial_explanation_1">Order and pay from the convenience of your table</string>
+    <string name="tutorial_explanation_2">Your order is immediately routed to the kitchen and prepared</string>
+    <string name="tutorial_explanation_3">When it’s done, the waiter will know exactly where to bring it</string>
+    <string name="tutorial_explanation_4">Enjoy your meal and reorder conveniently at any time</string>
     <string name="tutorial_screen_first">Order from your table\nwith your phone:</string>
     <string name="tutorial_screen_second">Enjoy your meal!</string>
+    <string name="tutorial_skip">Skip</string>
     <string name="txt_checkout_small">Checkout</string>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <string name="yes">YES</string>
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <item name="android:windowContentOverlay">@null</item>
@@ -495,7 +480,7 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:windowAnimationStyle">@style/TransitionAnimation.Activity</item>
     </style>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.Animation.AppCompat.DropDownUp" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/abc_grow_fade_in_from_bottom</item>
@@ -1350,7 +1335,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="CustomDialogTheme" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -1393,7 +1378,7 @@
     <style name="MyActionBarTheme" parent="Base.Widget.AppCompat.Light.ActionBar.Solid">
         <item name="elevation">0dp</item>
     </style>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1658,13 +1643,13 @@
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="TransitionAnimation.Activity" parent="@android:style/Animation.Activity">
         <item name="android:windowEnterAnimation">@anim/fade_in</item>
         <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
@@ -1749,7 +1734,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <style name="bt_app_switch_button_divider">
         <item name="android:layout_height">@dimen/bt_payment_method_button_divider_height</item>
@@ -1758,18 +1743,18 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:visibility">gone</item>
     </style>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="bt_base_textview">
         <item name="android:textSize">@dimen/bt_input_text_size</item>
     </style>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <style name="bt_base_textview_bold">
         <item name="android:textSize">@dimen/bt_default_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="bt_card_form_field" parent="bt_base_textview">
         <item name="android:layout_width">match_parent</item>
@@ -1787,7 +1772,7 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
     </style>
-    <!-- From: file:/Users/user/Desktop/Workspace/Android%20Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
+    <!-- From: file:/Users/artcode4/git/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <style name="bt_form_appswitch_button">
         <item name="android:layout_width">0dp</item>
