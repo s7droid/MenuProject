@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:id="@+id/relativelayoutContainer"
@@ -22,7 +23,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="30dp"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <View
                     android:layout_width="match_parent"
@@ -73,7 +74,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <com.usemenu.MenuAndroidApplication.views.MenuEditText
                         android:id="@+id/edittextManageAccountActivityPassword"
@@ -149,151 +150,193 @@
                 android:text="@string/manage_account_change_credit_card"
                 android:textStyle="bold" />
 
+            <!--<LinearLayout-->
+            <!--android:id="@+id/linearlayoutManageAccountActivityCardContainer"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/buttonManageAccountActivityScanCreditCard"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="@color/menu_main_divider_color" />-->
+
+            <!--<com.usemenu.MenuAndroidApplication.views.MenuEditText-->
+            <!--android:id="@+id/edittextManageAccountActivityCardNumber"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/sign_in_edittext_shape"-->
+            <!--android:hint="@string/sign_up_credit_card_number_hint_text"-->
+            <!--android:imeOptions="actionNext"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="19"-->
+            <!--android:paddingBottom="10dp"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/menu_main_gray_light"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="@color/menu_main_divider_color" />-->
+
+            <!--&lt;!&ndash; <com.s7design.menu.views.MenuEditText &ndash;&gt;-->
+            <!--&lt;!&ndash; android:id="@+id/edittextManageAccountActivityNameOnCard" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:layout_width="match_parent" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:layout_height="wrap_content" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:background="@drawable/sign_in_edittext_shape" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:focusable="false" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:hint="@string/sign_up_name_on_card_hint_text" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:inputType="textPersonName" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:paddingBottom="10dp" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:paddingTop="10dp" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:singleLine="true" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:textColor="@color/menu_main_gray" /> &ndash;&gt;-->
+
+
+            <!--&lt;!&ndash; <View &ndash;&gt;-->
+            <!--&lt;!&ndash; android:layout_width="match_parent" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:layout_height="1dp" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:alpha="0.5" &ndash;&gt;-->
+            <!--&lt;!&ndash; android:background="@color/menu_main_gray" /> &ndash;&gt;-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<com.usemenu.MenuAndroidApplication.views.MenuEditText-->
+            <!--android:id="@+id/edittextManageAccountActivityMonth"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/edittextManageAccountActivityCCV"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignTop="@+id/edittextManageAccountActivityCCV"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:gravity="center_horizontal|center_vertical"-->
+            <!--android:hint="MM"-->
+            <!--android:imeOptions="actionNext"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="2"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/menu_main_gray_light"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<com.usemenu.MenuAndroidApplication.views.MenuEditText-->
+            <!--android:id="@+id/edittextManageAccountActivityYear"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/edittextManageAccountActivityCCV"-->
+            <!--android:layout_alignTop="@+id/edittextManageAccountActivityCCV"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:layout_toRightOf="@+id/edittextManageAccountActivityMonth"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:drawablePadding="10dp"-->
+            <!--android:drawableRight="@drawable/sign_up_calendar"-->
+            <!--android:gravity="center_horizontal|center_vertical"-->
+            <!--android:hint="YY"-->
+            <!--android:imeOptions="actionNext"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="2"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/menu_main_gray_light"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_alignLeft="@+id/edittextManageAccountActivityMonth"-->
+            <!--android:layout_alignRight="@+id/edittextManageAccountActivityMonth"-->
+            <!--android:layout_below="@+id/edittextManageAccountActivityMonth"-->
+            <!--android:background="@color/menu_main_divider_color" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_alignLeft="@+id/edittextManageAccountActivityYear"-->
+            <!--android:layout_alignRight="@+id/edittextManageAccountActivityYear"-->
+            <!--android:layout_below="@+id/edittextManageAccountActivityYear"-->
+            <!--android:background="@color/menu_main_divider_color" />-->
+
+            <!--<com.usemenu.MenuAndroidApplication.views.MenuEditText-->
+            <!--android:id="@+id/edittextManageAccountActivityCCV"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@drawable/sign_in_edittext_shape"-->
+            <!--android:gravity="right"-->
+            <!--android:hint="@string/sign_up_cvv_hint_text"-->
+            <!--android:imeOptions="actionDone"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="4"-->
+            <!--android:paddingBottom="10dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/menu_main_gray_light"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_alignLeft="@+id/edittextManageAccountActivityCCV"-->
+            <!--android:layout_alignRight="@+id/edittextManageAccountActivityCCV"-->
+            <!--android:layout_below="@+id/edittextManageAccountActivityCCV"-->
+            <!--android:background="@color/menu_main_divider_color" />-->
+            <!--</RelativeLayout>-->
+            <!--</LinearLayout>-->
+
             <LinearLayout
-                android:id="@+id/linearlayoutManageAccountActivityCardContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/buttonManageAccountActivityScanCreditCard"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:orientation="vertical" >
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/menu_main_divider_color" />
-
-                <com.usemenu.MenuAndroidApplication.views.MenuEditText
-                    android:id="@+id/edittextManageAccountActivityCardNumber"
-                    android:layout_width="match_parent"
+                <com.usemenu.MenuAndroidApplication.views.MenuTextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/sign_in_edittext_shape"
-                    android:hint="@string/sign_up_credit_card_number_hint_text"
-                    android:imeOptions="actionNext"
-                    android:inputType="number"
-                    android:maxLength="19"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
-                    android:singleLine="true"
-                    android:textColor="@color/menu_main_gray_light"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/manage_account_fill_in_credit_card_manually"
+                    android:textColor="@color/menu_main_gray_light" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/menu_main_divider_color" />
 
-                <!-- <com.s7design.menu.views.MenuEditText -->
-                <!-- android:id="@+id/edittextManageAccountActivityNameOnCard" -->
-                <!-- android:layout_width="match_parent" -->
-                <!-- android:layout_height="wrap_content" -->
-                <!-- android:background="@drawable/sign_in_edittext_shape" -->
-                <!-- android:focusable="false" -->
-                <!-- android:hint="@string/sign_up_name_on_card_hint_text" -->
-                <!-- android:inputType="textPersonName" -->
-                <!-- android:paddingBottom="10dp" -->
-                <!-- android:paddingTop="10dp" -->
-                <!-- android:singleLine="true" -->
-                <!-- android:textColor="@color/menu_main_gray" /> -->
+                <com.devmarvel.creditcardentry.library.CreditCardForm
+                    android:id="@+id/creditCardForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    app:helper_text_color="@color/menu_main_orange"
+                    app:hint_text_color="@color/menu_main_gray_light"
+                    app:include_helper="false"
+                    app:include_zip="false"
+                    app:input_background="@drawable/border_empty"
+                    app:text_color="@color/menu_main_gray" />
 
-
-                <!-- <View -->
-                <!-- android:layout_width="match_parent" -->
-                <!-- android:layout_height="1dp" -->
-                <!-- android:alpha="0.5" -->
-                <!-- android:background="@color/menu_main_gray" /> -->
-
-                <RelativeLayout
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <com.usemenu.MenuAndroidApplication.views.MenuEditText
-                        android:id="@+id/edittextManageAccountActivityMonth"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/edittextManageAccountActivityCCV"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignTop="@+id/edittextManageAccountActivityCCV"
-                        android:layout_marginRight="15dp"
-                        android:background="@android:color/transparent"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:hint="MM"
-                        android:imeOptions="actionNext"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        android:singleLine="true"
-                        android:textColor="@color/menu_main_gray_light"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <com.usemenu.MenuAndroidApplication.views.MenuEditText
-                        android:id="@+id/edittextManageAccountActivityYear"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/edittextManageAccountActivityCCV"
-                        android:layout_alignTop="@+id/edittextManageAccountActivityCCV"
-                        android:layout_marginRight="15dp"
-                        android:layout_toRightOf="@+id/edittextManageAccountActivityMonth"
-                        android:background="@android:color/transparent"
-                        android:drawablePadding="10dp"
-                        android:drawableRight="@drawable/sign_up_calendar"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:hint="YY"
-                        android:imeOptions="actionNext"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        android:singleLine="true"
-                        android:textColor="@color/menu_main_gray_light"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_alignLeft="@+id/edittextManageAccountActivityMonth"
-                        android:layout_alignRight="@+id/edittextManageAccountActivityMonth"
-                        android:layout_below="@+id/edittextManageAccountActivityMonth"
-                        android:background="@color/menu_main_divider_color" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_alignLeft="@+id/edittextManageAccountActivityYear"
-                        android:layout_alignRight="@+id/edittextManageAccountActivityYear"
-                        android:layout_below="@+id/edittextManageAccountActivityYear"
-                        android:background="@color/menu_main_divider_color" />
-
-                    <com.usemenu.MenuAndroidApplication.views.MenuEditText
-                        android:id="@+id/edittextManageAccountActivityCCV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/sign_in_edittext_shape"
-                        android:gravity="right"
-                        android:hint="@string/sign_up_cvv_hint_text"
-                        android:imeOptions="actionDone"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="10dp"
-                        android:singleLine="true"
-                        android:textColor="@color/menu_main_gray_light"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_alignLeft="@+id/edittextManageAccountActivityCCV"
-                        android:layout_alignRight="@+id/edittextManageAccountActivityCCV"
-                        android:layout_below="@+id/edittextManageAccountActivityCCV"
-                        android:background="@color/menu_main_divider_color" />
-                </RelativeLayout>
+                    android:layout_height="1dp"
+                    android:background="@color/menu_main_divider_color" />
             </LinearLayout>
+
+
         </RelativeLayout>
     </ScrollView>
 

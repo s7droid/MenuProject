@@ -161,6 +161,7 @@
     <string name="manage_account_change_credit_card">CHANGE CREDIT CARD</string>
     <string name="manage_account_confirm_changes_text">CONFIRM CHANGES</string>
     <string name="manage_account_passwords_not_same">New password and repeated password are not same</string>
+    <string name="manage_account_fill_in_credit_card_manually">Or fill in Credit Card info manually:</string>
 
     <!-- Meal details -->
     <string name="meal_details_order_large">ORDER LARGE</string>

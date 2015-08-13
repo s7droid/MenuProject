@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 22
     buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.usemenu.MenuAndroidApplication"
         minSdkVersion 18
-        targetSdkVersion 21
+        targetSdkVersion 22
     }
 
     buildTypes {
@@ -25,4 +25,7 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.18'
     compile 'com.braintreepayments.api:braintree:1.+'
     compile 'io.card:android-sdk:5.0.1'
+    //    compile 'com.github.dbachelder:CreditCardEntry:1.4.1'
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile project(':CreditCardEntry')
 }
