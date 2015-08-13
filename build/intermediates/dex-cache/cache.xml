@@ -2,53 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/user/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/braintree-api/1.6.5/9d93c6ae586d4067d5978fd151d6e0504fe3b0c8/braintree-api-1.6.5.jar"
+        jar="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/MenuProject/CreditCardEntry/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="9d93c6ae586d4067d5978fd151d6e0504fe3b0c8">
-        <dex dex="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/pre-dexed/debug/braintree-api-1.6.5-a772135afebdaa02b9869671cfb57553b1943848.jar" />
-    </item>
-    <item
-        jar="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/io.card/android-sdk/5.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a99806fbb9b63d99a906d4ae92546827f895a6bf">
-        <dex dex="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/pre-dexed/debug/classes-fe8716909e789b300ef8708ea5b3719648295b59.jar" />
-    </item>
-    <item
-        jar="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments.api/braintree/1.6.5/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="b8ef8dc89d8427a9ab0416a94bf34dfa90e8b615">
-        <dex dex="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/pre-dexed/debug/classes-b51aec4f045c2146b1e777867c712abe8026fb23.jar" />
-    </item>
-    <item
-        jar="/Users/user/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/pre-dexed/debug/gson-2.3.1-119c9d16646ef6989f022b88c7f91443fabfc025.jar" />
-    </item>
-    <item
-        jar="/Users/user/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/data/1.6.5/3fc9e0c69a371b676d80693d56b28e6a73f0f13b/data-1.6.5.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="3fc9e0c69a371b676d80693d56b28e6a73f0f13b">
-        <dex dex="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/pre-dexed/debug/data-1.6.5-cfc393d0a45c186ce2803787e60f941a755d83e6.jar" />
-    </item>
-    <item
-        jar="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/exploded-aar/com.braintreepayments/card-form/2.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="e3c355553b4bd7c3a22bc21f483b91a746f2685b">
-        <dex dex="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/pre-dexed/debug/classes-2782982400710890624950ebe4e6b5cebea7173e.jar" />
-    </item>
-    <item
-        jar="/Users/user/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/38da306aafee11459cd935a01d2c92a98dc670a4/library-1.0.18.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
-        <dex dex="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/pre-dexed/debug/library-1.0.18-e73496edd299dade7e1120abe5a40b1f8157019e.jar" />
+        sha1="aee1c39bd187438c20c593d803c306c8a08b0e83">
+        <dex dex="/Users/user/Desktop/Workspace/Android Studio/Menu/MenuProject/app/build/intermediates/pre-dexed/debug/classes-b3f2ccb342adf2e8dcf887b95e15a6228d0a08e5.jar" />
     </item>
 
 </items>
