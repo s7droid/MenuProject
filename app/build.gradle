@@ -27,5 +27,5 @@ dependencies {
     compile 'io.card:android-sdk:5.0.1'
  //   compile 'com.github.dbachelder:CreditCardEntry:1.4.1'
     compile 'com.android.support:appcompat-v7:22.0.0'
-   // compile project(':CreditCardEntry')
+    compile project(':CreditCardEntry')
 }

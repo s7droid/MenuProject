@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.android.volley.Response.Listener;
 import com.usemenu.MenuAndroidApplication.R;
+import com.usemenu.MenuAndroidApplication.app.Constants;
 import com.usemenu.MenuAndroidApplication.app.Menu;
 import com.usemenu.MenuAndroidApplication.callbacks.OnIBeaconSearchResultCallback;
 import com.usemenu.MenuAndroidApplication.utils.Settings;
@@ -98,13 +99,13 @@ public class SplashActivity extends BaseActivity {
 		} else if (!Utils.isLocationEnabled(this)) {
 
 			Intent intent = new Intent(this, SplashWarningActivity.class);
-			intent.putExtra(SplashWarningActivity.INTENT_EXTRA_TAG_START, SplashWarningActivity.INTENT_EXTRA_START_LOCATION);
+			intent.putExtra(Constants.INTENT_EXTRA_TAG_START, Constants.INTENT_EXTRA_START_LOCATION);
 			startActivityForResult(intent, REQUEST_CODE_LOCATION);
 
 		} else if (!Utils.isBluetoothEnabled()) {
 
 			Intent intent = new Intent(this, SplashWarningActivity.class);
-			intent.putExtra(SplashWarningActivity.INTENT_EXTRA_TAG_START, SplashWarningActivity.INTENT_EXTRA_START_BLUETOOTH);
+			intent.putExtra(Constants.INTENT_EXTRA_TAG_START, Constants.INTENT_EXTRA_START_BLUETOOTH);
 			startActivityForResult(intent, REQUEST_CODE_BLUETOOTH);
 
 			// OkCancelDialogFragment okCancelDialog = new
@@ -176,7 +177,7 @@ public class SplashActivity extends BaseActivity {
 			} else {
 				if (!Utils.isBluetoothEnabled()) {
 					Intent intent = new Intent(this, SplashWarningActivity.class);
-					intent.putExtra(SplashWarningActivity.INTENT_EXTRA_TAG_START, SplashWarningActivity.INTENT_EXTRA_START_BLUETOOTH);
+					intent.putExtra(Constants.INTENT_EXTRA_TAG_START, Constants.INTENT_EXTRA_START_BLUETOOTH);
 					startActivityForResult(intent, REQUEST_CODE_BLUETOOTH);
 				} else {
 					getBraintreeToken();
@@ -188,7 +189,7 @@ public class SplashActivity extends BaseActivity {
 			} else {
 				if (!Utils.isLocationEnabled(this)) {
 					Intent intent = new Intent(this, SplashWarningActivity.class);
-					intent.putExtra(SplashWarningActivity.INTENT_EXTRA_TAG_START, SplashWarningActivity.INTENT_EXTRA_START_LOCATION);
+					intent.putExtra(Constants.INTENT_EXTRA_TAG_START, Constants.INTENT_EXTRA_START_LOCATION);
 					startActivityForResult(intent, REQUEST_CODE_LOCATION);
 
 				} else {
@@ -199,7 +200,7 @@ public class SplashActivity extends BaseActivity {
 	}
 
 	/**
-	 * Method for initializing all views in {@link SplashSActivity}
+	 * Method for initializing all views in {@link SplashActivity}
 	 */
 	private void initViews() {
 
