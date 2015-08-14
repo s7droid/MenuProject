@@ -12,14 +12,13 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
-import com.google.gson.Gson;
 import com.usemenu.MenuAndroidApplication.R;
-import com.usemenu.MenuAndroidApplication.app.Constants;
+import com.usemenu.MenuAndroidApplication.app.Menu;
 import com.usemenu.MenuAndroidApplication.dataclasses.Item;
-import com.usemenu.MenuAndroidApplication.views.CategoryMealItemView;
 import com.usemenu.MenuAndroidApplication.volley.VolleySingleton;
 
 import java.util.ArrayList;
@@ -44,8 +43,7 @@ public class MealSubCategoriesActivity extends BaseActivity {
     }
 
     private void initData() {
-        CategoryMealItemView.BundleItem it = new Gson().fromJson(getIntent().getStringExtra(Constants.KEY_ITEMS), CategoryMealItemView.BundleItem.class);
-        allCategoryItems = it.items;
+        allCategoryItems = Menu.getInstance().getDataManager().getItemsList();
 
         items = getListOfMealSubCategories();
 
@@ -186,10 +184,13 @@ public class MealSubCategoriesActivity extends BaseActivity {
 
             Item item = getItem(position);
 
-            if (position % 2 == 0)
+            if (item != null && item.amount > 0) {
                 holder.container.setVisibility(View.VISIBLE);
-            else
+                holder.details.setText(getResources().getString(R.string.category_meals_manage_modyfiers));
+            } else {
                 holder.container.setVisibility(View.GONE);
+                holder.details.setText(getResources().getString(R.string.meal_details_order));
+            }
 
             if (position == 0) {
                 holder.separatorTop.setVisibility(View.GONE);
@@ -208,6 +209,26 @@ public class MealSubCategoriesActivity extends BaseActivity {
             holder.name.setText(item.name);
 
             holder.price.setText(item.currency + " " + item.largeprice + " / " + item.smallprice);
+
+            holder.addItem.setEnabled(true);
+            holder.addItem.setTag(item);
+            holder.addItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Item it = (Item) v.getTag();
+                    Toast.makeText(context, it.name + "\n+ADD ITEM", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            holder.details.setEnabled(true);
+            holder.details.setTag(item);
+            holder.details.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Item it = (Item) v.getTag();
+                    Toast.makeText(context, it.name + "\nDETAILS", Toast.LENGTH_SHORT).show();
+                }
+            });
             return convertView;
         }
 

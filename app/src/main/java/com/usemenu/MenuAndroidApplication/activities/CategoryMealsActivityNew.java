@@ -113,6 +113,8 @@ public class CategoryMealsActivityNew extends BaseActivity {
                     categoryItems.add(item);
             }
 
+            Menu.getInstance().getDataManager().setItemsList((ArrayList<Item>) reorderedList);
+
             CategoryMealItemView v = new CategoryMealItemView(this, category, categoryItems, reorderedList, categories);
             categoriesContainer.addView(v);
         }

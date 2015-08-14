@@ -124,7 +124,9 @@
     <string name="category_meals_out_of_stock">SOLD OUT</string>
     <string name="category_meals_no_items_content">It appears that here is no item in this category. Please try ordering something from an other category</string>
     <string name="category_meals_no_items_title">No items</string>
-
+    <string name="category_meals_details">DETAILS</string>
+    <string name="category_meals_add_item">+ADD ITEM</string>
+    <string name="category_meals_manage_modyfiers">MANAGE MODIFIERS</string>
     <!-- Sign in -->
     <string name="sign_in_button_text">SIGN IN</string>
     <string name="sign_in_username_hint_text">Email address</string>
